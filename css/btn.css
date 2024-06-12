@@ -1,10 +1,4 @@
 /********** ハンバーガーボタン **********/
-body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  background-color: #f4f4f4;
-}
-
 .header-container {
   display: flex;
   align-items: center;
@@ -64,20 +58,17 @@ body {
   justify-content: center; /* 中央揃え */
 }
 
-.hamburger-menu.show {
-  display: flex;
-}
-
 .hamburger-logo {
   width: 153px;
   height: 34px;
   flex-shrink: 0;
+  color: var(--accent_1_2, #e07bb5);
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   position: absolute;
   /* 絶対位置指定 */
-  top: 0;
+  top: 45px;
   /* 上端 */
   left: 0;
   /* 左端 */
@@ -126,68 +117,36 @@ body {
   background-color: #555; /* ホバー時の背景色 */
 }
 
-.submenu-overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-  z-index: 1100;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.submenu-overlay.show {
-  display: flex;
-}
-
-.hamburger-polygon {
-  cursor: pointer;
-  margin-left: 10px;
-  width: 16px;
-  height: 16px;
-}
-
-.submenu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.submenu li {
-  margin: 10px 0;
-}
-
-.submenu li a {
-  color: #e07bb5;
-  text-decoration: none;
-  font-size: 20px;
-}
-
 .hamburger-sns {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 0 86px;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+
+.hamburger-tunecore-text {
+  color: var(--accent_1_2, #e07bb5);
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
 }
 
 /********** view moreボタン **********/
 
 .btn-container {
-  padding: 45px 81px 57px 78px;
+  text-align: center;
+  margin-top: 224px;
 }
 
 .custom-btn {
   width: 182px;
-  height: 42px;
+  height: 30px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  padding: 10px;
+  padding-bottom: 4px;
   color: var(--black_1, #000);
   font-size: 15px;
   font-style: normal;
@@ -210,29 +169,4 @@ body {
 
 .movie-btn-container {
   padding: 466px 81px 57px 78px;
-}
-
-/********** お問い合わせボタン **********/
-.contact-button {
-  background-color: #e07bb5;
-  padding: 6px 41px;
-  margin: 8% auto;
-  text-align: center;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-  width: 51%;
-}
-
-.contact-button a {
-  text-decoration: none;
-  color: black; /* 黒い文字色 */
-  font-size: 15px; /* フォントサイズを調整 */
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: 4.5px;
-}
-
-.contact-button:hover {
-  background-color: #d5698e; /* ホバー時の背景色 */
 }

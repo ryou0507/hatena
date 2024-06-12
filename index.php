@@ -27,7 +27,9 @@
     <div class="all-container">
         <section class="profile-container">
             <p class="kana kana01">profile</p>
-            <h2 class="zabuton-beside top-h2">プロフィール</h2>
+            <h2 class="zabuton-beside top-h2">
+                <p>プロフィール</p>
+            </h2>
             <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/profile.png" alt="" class="profile-image">
             <ul>
                 <p class="furigana">かくりよ</p>
@@ -40,7 +42,9 @@
 
         <section class="schedule-container">
             <p class="kana kana02">schedule</p>
-            <h2 class="zabuton-beside-2 top-h2">スケジュール</h2>
+            <h2 class="zabuton-beside-2 top-h2 ">
+                <p class="schedule-h2">スケジュール</p>
+            </h2>
             <div class="profile-vertical text02">どんな一日も生き抜いただけで満点◎</div>
             <?php custom_schedule_list_content(); ?>
 
@@ -51,7 +55,7 @@
 
         <section class="movie-container">
             <p class="kana kana03">movie</p>
-            <h2 class="zabuton-beside-3 top-h2">動画</h2>
+            <h2 class="zabuton-beside-3 top-h2 movie-h2">動画</h2>
             <div class="profile-vertical text03">夢を人質に奪われた世界を取り戻せるかな</div>
             <div class="movie-thumbnail-content">
                 <div class="movie-thumbnail-container">
@@ -90,7 +94,17 @@
             </div>
         </section>
 
-
+        <section class="lyrics-container">
+            <p class="kana kana04">lyrics</p>
+            <h2 class="zabuton-beside-4 top-h2 lyrics-h2">リリック</h2>
+            <div class="profile-vertical text04">明日は僕が電車をとめてしまうかも</div>
+            <div class="lyrics-items">
+                <div class="lyrics-sub">
+                    <h3>
+                        <p><span>01</span>拗け</p>
+                    </h3>
+                </div>
+            </div>
     </div>
 </div>
 
