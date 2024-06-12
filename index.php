@@ -52,13 +52,44 @@
         <section class="movie-container">
             <p class="kana kana03">movie</p>
             <h2 class="zabuton-beside-3 top-h2">動画</h2>
-            <div class="profile-vertical text03">明日は僕が電車をとめてしまうかも</div>
+            <div class="profile-vertical text03">夢を人質に奪われた世界を取り戻せるかな</div>
+            <div class="movie-thumbnail-content">
+                <div class="movie-thumbnail-container">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/movie-1.png" alt="" class="movie-thumbnail" id="thumbnail-1">
+                </div>
+                <div id="videoModal-1" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <iframe id="video-1" width="320" height="180" src="https://www.youtube.com/embed/gsvgu-dlJz8?si=ljobtv4u_9zYa24-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
 
-            <div class="btn-container">
-                <a href="" class="custom-btn">view more</a>
+                <div class="movie-thumbnail-container">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/movie-2.png" alt="" class="movie-thumbnail" id="thumbnail-2">
+                </div>
+                <div id="videoModal-2" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <iframe id="video-2" width="320" height="180" src="https://www.youtube.com/embed/hq_3UqFaXFE?si=N06ZSHoDfHZKVfZm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="movie-thumbnail-container">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/movie-3.png" alt="" class="movie-thumbnail" id="thumbnail-3">
+                </div>
+                <div id="videoModal-3" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <iframe id="video-3" width="320" height="180" src="https://www.youtube.com/embed/beRsnPv4yNc?si=isNNiUfhxYcZoS6i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
             </div>
 
+            <div class="movie-btn-container">
+                <a href="" class="custom-btn">view more</a>
+            </div>
         </section>
+
 
     </div>
 </div>
