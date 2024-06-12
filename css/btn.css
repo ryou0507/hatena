@@ -123,8 +123,8 @@
   padding: 10px;
 }
 
-.hamburger-tunecore-text {
-  color: var(--accent_1_2, #e07bb5);
+.hamburger-tunecore-text a {
+  color: #e07bb5;
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
@@ -168,4 +168,29 @@
 
 .movie-btn-container {
   padding: 466px 81px 57px 78px;
+}
+
+/********** お問い合わせボタン **********/
+.contact-button {
+  background-color: #e07bb5;
+  padding: 6px 41px;
+  margin: 8% auto;
+  text-align: center;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  width: 51%;
+}
+
+.contact-button a {
+  text-decoration: none;
+  color: black; /* 黒い文字色 */
+  font-size: 15px; /* フォントサイズを調整 */
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 4.5px;
+}
+
+.contact-button:hover {
+  background-color: #d5698e; /* ホバー時の背景色 */
 }

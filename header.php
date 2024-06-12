@@ -81,6 +81,9 @@ function getCurrentUrl()
                                 <a href="">tunecore</a>
                             </div>
                         </div>
+                        <div class="contact-button">
+                            <a href="">お問い合わせ</a>
+                        </div>
                     </div>
                 </nav>
             </div>
