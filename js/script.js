@@ -9,27 +9,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // ハンバーガーアイコンの形状変更のトグル
     hamburger.classList.toggle('change');
   });
-
-  // サブメニューのトグル機能
-  var expandIcons = document.querySelectorAll('.hamburger-polygon');
-  expandIcons.forEach(function (icon) {
-    icon.addEventListener('click', function () {
-      var targetId = icon.getAttribute('data-target');
-      var submenu = document.getElementById(targetId);
-      if (submenu) {
-        submenu.style.display =
-          submenu.style.display === 'flex' ? 'none' : 'flex';
-      }
-    });
-  });
-
-  // サブメニューオーバーレイのクリックで閉じる機能
-  var submenuOverlays = document.querySelectorAll('.submenu-overlay');
-  submenuOverlays.forEach(function (overlay) {
-    overlay.addEventListener('click', function () {
-      overlay.style.display = 'none';
-    });
-  });
 });
 
 /********** movie モーダルウインドウ ***********/
