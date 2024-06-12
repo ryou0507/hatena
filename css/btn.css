@@ -1,0 +1,101 @@
+/********** ハンバーガーボタン **********/
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 20px;
+  color: black;
+  height: 60px; /* ヘッダーの高さ */
+  z-index: 1;
+  position: absolute;
+  top: 40px;
+  right: 1px;
+}
+
+.hamburger-btn {
+  display: flex;
+  align-items: center;
+  cursor: pointer; /* クリック可能な要素のカーソル */
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 20px; /* ハンバーガーボタンの高さ */
+}
+
+.header-left-line {
+  width: 35px; /* ラインの幅 */
+  height: 1px; /* ラインの高さ */
+  background-color: black; /* ラインの色 */
+  border-radius: 3px;
+  margin: 2px 0; /* ライン間の間隔 */
+}
+
+.hamburger-menu {
+  display: none; /* 初期状態では非表示 */
+  flex-direction: column;
+  position: absolute;
+  width: 100%; /* メニューの幅 */
+  top: 60px; /* メニューの開始位置 */
+  left: 0;
+  z-index: 1000;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.nav-links li a {
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-links li a:hover {
+  background-color: #555; /* ホバー時の背景色 */
+}
+
+.hamburger-sns {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+
+/********** view moreボタン **********/
+
+.btn-container {
+  padding: 45px 81px 57px 78px;
+}
+
+.custom-btn {
+  width: 182px;
+  height: 42px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  color: var(--black_1, #000);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 4.5px;
+  background: var(--base_1_500e70, #500e70);
+  text-decoration: none; /* リンクの下線を削除 */
+  /* drop shadow */
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.25);
+  /* drop shadow_2 */
+  box-shadow: 2px 2px 8px 0px #36094c;
+  border-radius: 4px; /* 角を丸くする場合に使用 */
+}
+
+.custom-btn:hover {
+  background: #3e0a56; /* ホバー時の背景色を変更 */
+  color: #fff; /* ホバー時の文字色を変更 */
+}
