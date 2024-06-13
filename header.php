@@ -36,6 +36,9 @@ function getCurrentUrl()
                             <p class="roman">hatena kakuriyo</p>
                         </h1>
                         <ul class="nav-links" id="nav-links">
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/polygon.svg" alt="" class="hamburger-movies-polygon" data-target="movies-submenu">
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/polygon.svg" alt="" class="hamburger-lyrics-polygon" data-target="lyrics-submenu">
+
                             <div class="links-container">
                                 <li class="top-text"><a href="<?php echo home_url('/'); ?>">home</a></li>
                                 <li class="bottom-text"><a href="<?php echo home_url('/'); ?>">ホーム</a></li>
@@ -50,12 +53,10 @@ function getCurrentUrl()
                             </div>
                             <div class="links-container">
                                 <li class="top-text"><a href="<?php echo home_url(''); ?>">movies</a></li>
-                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/polygon.svg" alt="" class="hamburger-polygon" data-target="movies-submenu">
                                 <li class="bottom-text"><a href="<?php echo home_url(); ?>">動画</a></li>
                             </div>
                             <div class="links-container">
                                 <li class="top-text"><a href="<?php echo home_url(''); ?>">lyrics</a></li>
-                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/polygon.svg" alt="" class="hamburger-polygon" data-target="lyrics-submenu">
                                 <li class="bottom-text"><a href="<?php echo home_url(); ?>">リリック</a></li>
                             </div>
                             <div class="links-container">
@@ -64,6 +65,20 @@ function getCurrentUrl()
                             </div>
                         </ul>
                         <div class="submenu-overlay" id="movies-submenu">
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/polygon.svg" alt="" class="hamburger-submenu-next-polygon" data-target="next-movies-submenu">
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/polygon-2.svg" alt="" class="hamburger-submenu-prev-polygon" data-target="nav-links">
+
+                            <div class="submenu-top">
+                                <div class="submenu-top-text">
+                                    <p class="submenu-top-eng">movies</p>
+                                    <p class="submenu-top-jap">動画</p>
+                                </div>
+                                <div class="submenu-page-number">
+                                    <p>11~20</p>
+                                    <p>21~30</p>
+                                </div>
+                            </div>
+
                             <ul class="submenu">
                                 <li><a href="<?php echo home_url(); ?>">01 拗け</a></li>
                                 <li><a href="<?php echo home_url(); ?>">02 卒業</a></li>
@@ -76,7 +91,132 @@ function getCurrentUrl()
                                 <li><a href="<?php echo home_url(); ?>">09 かいせい</a></li>
                                 <li><a href="<?php echo home_url(); ?>">10 せんたく</a></li>
                             </ul>
+                            <div class="hamburger-submenu-sns">
+                                <div class="hamburger-X-icon">
+                                    <a href="">
+                                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/hamburger-x-logo.png" alt="X icon" class="hamburger-X-img" />
+                                    </a>
+                                </div>
+                                <div class="hamburger-youtube-icon">
+                                    <a href="">
+                                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/hamburger-youtube-logo.png" alt="youtube icon" class="hamburger-youtube-img" />
+                                    </a>
+                                </div>
+                                <div class="hamburger-tiktok-icon">
+                                    <a href="">
+                                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/hamburger-tictok-logo.png" alt="tiktok icon" class="hamburger-tiktok-img" />
+                                    </a>
+                                </div>
+                                <div class="hamburger-tunecore-text">
+                                    <a href="">tunecore</a>
+                                </div>
+                            </div>
+                            <div class="contact-button">
+                                <a href="">お問い合わせ</a>
+                            </div>
                         </div>
+                        <div class="submenu-overlay" id="next-movies-submenu">
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/polygon.svg" alt="" class="hamburger-submenu-next-polygon" data-target="new-submenu">
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/polygon-2.svg" alt="" class="hamburger-submenu-prev-polygon" data-target="movies-submenu">
+
+                            <div class="submenu-top">
+                                <div class="submenu-top-text">
+                                    <p class="submenu-top-eng">movies</p>
+                                    <p class="submenu-top-jap">動画</p>
+                                </div>
+                                <div class="submenu-page-number">
+                                    <p>1~10</p>
+                                    <p>21~30</p>
+                                </div>
+                            </div>
+                            <ul class="submenu">
+                                <li><a href="<?php echo home_url(); ?>">11 種明かしなんて嫌いだ</a></li>
+                                <li><a href="<?php echo home_url(); ?>">12 多分うまく笑えてないけど</a></li>
+                                <li><a href="<?php echo home_url(); ?>">13 匿名</a></li>
+                                <li><a href="<?php echo home_url(); ?>">14 むじょうけんこうふく</a></li>
+                                <li><a href="<?php echo home_url(); ?>">15 今日も生き抜いたキミへ</a></li>
+                                <li><a href="<?php echo home_url(); ?>">16 ステンドグラス</a></li>
+                                <li><a href="<?php echo home_url(); ?>">17 衷心より</a></li>
+                                <li><a href="<?php echo home_url(); ?>">18 PERSON</a></li>
+                                <li><a href="<?php echo home_url(); ?>">19 今日まで生き抜いたキミへ</a></li>
+                                <li><a href="<?php echo home_url(); ?>">20 妄想GoodNight</a></li>
+                            </ul>
+                            <div class="hamburger-submenu-sns">
+                                <div class="hamburger-X-icon">
+                                    <a href="">
+                                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/hamburger-x-logo.png" alt="X icon" class="hamburger-X-img" />
+                                    </a>
+                                </div>
+                                <div class="hamburger-youtube-icon">
+                                    <a href="">
+                                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/hamburger-youtube-logo.png" alt="youtube icon" class="hamburger-youtube-img" />
+                                    </a>
+                                </div>
+                                <div class="hamburger-tiktok-icon">
+                                    <a href="">
+                                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/hamburger-tictok-logo.png" alt="tiktok icon" class="hamburger-tiktok-img" />
+                                    </a>
+                                </div>
+                                <div class="hamburger-tunecore-text">
+                                    <a href="">tunecore</a>
+                                </div>
+                            </div>
+                            <div class="contact-button">
+                                <a href="">お問い合わせ</a>
+                            </div>
+                        </div>
+
+                        <div class="submenu-overlay-last" id="new-submenu">
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/polygon-2.svg" alt="" class="hamburger-submenu-prev-polygon" data-target="next-movies-submenu">
+
+                            <div class="submenu-top-last">
+                                <div class="submenu-top-text">
+                                    <p class="submenu-top-eng">movies</p>
+                                    <p class="submenu-top-jap">動画</p>
+                                </div>
+                                <div class="submenu-page-number">
+                                    <p>1~10</p>
+                                    <p>11~20</p>
+                                </div>
+                            </div>
+                            <ul class="submenu">
+                                <li><a href="<?php echo home_url(); ?>">21 キミがいる・・・、僕に成る。</a></li>
+                                <li><a href="<?php echo home_url(); ?>"></a></li>
+                                <li><a href="<?php echo home_url(); ?>"></a></li>
+                                <li><a href="<?php echo home_url(); ?>"></a></li>
+                                <li><a href="<?php echo home_url(); ?>"></a></li>
+                                <li><a href="<?php echo home_url(); ?>"></a></li>
+                                <li><a href="<?php echo home_url(); ?>"></a></li>
+                                <li><a href="<?php echo home_url(); ?>"></a></li>
+                                <li><a href="<?php echo home_url(); ?>"></a></li>
+                                <li><a href="<?php echo home_url(); ?>"></a></li>
+                            </ul>
+                            <div class="hamburger-submenu-sns-last">
+                                <div class="hamburger-X-icon">
+                                    <a href="">
+                                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/hamburger-x-logo.png" alt="X icon" class="hamburger-X-img" />
+                                    </a>
+                                </div>
+                                <div class="hamburger-youtube-icon">
+                                    <a href="">
+                                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/hamburger-youtube-logo.png" alt="youtube icon" class="hamburger-youtube-img" />
+                                    </a>
+                                </div>
+                                <div class="hamburger-tiktok-icon">
+                                    <a href="">
+                                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/hamburger-tictok-logo.png" alt="tiktok icon" class="hamburger-tiktok-img" />
+                                    </a>
+                                </div>
+                                <div class="hamburger-tunecore-text">
+                                    <a href="">tunecore</a>
+                                </div>
+                            </div>
+                            <div class="contact-button">
+                                <a href="">お問い合わせ</a>
+                            </div>
+                        </div>
+
+
                         <div class="submenu-overlay" id="lyrics-submenu">
                             <ul class="submenu">
                                 <li><a href="<?php echo home_url(); ?>">リリック1</a></li>

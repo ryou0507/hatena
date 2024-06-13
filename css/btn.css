@@ -8,7 +8,7 @@
   height: 60px; /* ヘッダーの高さ */
   z-index: 1;
   position: absolute;
-  top: 40px;
+  top: -5px;
   right: 1px;
 }
 
@@ -46,16 +46,13 @@
 
 .hamburger-menu {
   display: none; /* 初期状態では非表示 */
-  flex-direction: column;
   position: fixed;
   width: 100%; /* メニューの幅 */
   height: 100%;
   top: 0; /* 上端から */
   left: 0; /* 左端から */
-  background-color: rgba(0, 0, 0, 0.9); /* 背景色 */
+  background-color: black; /* 背景色 */
   z-index: 1000;
-  align-items: center; /* 中央揃え */
-  justify-content: center; /* 中央揃え */
 }
 
 .hamburger-menu.show {
@@ -71,20 +68,23 @@
   line-height: normal;
   position: absolute;
   /* 絶対位置指定 */
-  top: 0;
+  top: 0%;
   /* 上端 */
   left: 0;
   /* 左端 */
   padding: 10px;
   /* 余白調整 */
+  color: #e07bb5;
+  z-index: 1400;
 }
 
 .nav-links {
   list-style: none;
   padding: 0;
-  margin: 100px 0 0 0;
+  margin: 53px 0 0 0;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .links-container {
@@ -134,31 +134,79 @@
   flex-direction: column;
 }
 
+.submenu-overlay-last {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1100;
+  align-items: center;
+  flex-direction: column;
+}
+
 .submenu-overlay.show {
   display: flex;
 }
 
-.hamburger-polygon {
+.hamburger-movies-polygon {
   cursor: pointer;
-  margin-left: 10px;
   width: 16px;
   height: 16px;
+  position: absolute;
+  top: 57%;
+  right: 34%;
+}
+
+.hamburger-lyrics-polygon {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 72%;
+  right: 34%;
+}
+
+.hamburger-submenu-prev-polygon {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 49%;
+  left: 8%;
+}
+
+.hamburger-submenu-next-polygon {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 49%;
+  right: 8%;
 }
 
 .submenu {
   list-style: none;
   padding: 0;
   margin: 0;
+  width: 60%;
 }
 
 .submenu li {
-  margin: 10px 0;
+  margin: 8% 0;
+  white-space: nowrap;
 }
 
 .submenu li a {
   color: #e07bb5;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 4.5px;
 }
 
 .hamburger-sns {
@@ -166,6 +214,114 @@
   justify-content: space-around;
   align-items: center;
   padding: 0 86px;
+}
+
+.hamburger-submenu-sns {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 97px;
+  width: 100%;
+}
+
+.hamburger-submenu-sns-last {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 97px;
+  width: 100%;
+  margin-top: 101%;
+}
+
+.hamburger-tunecore-text a {
+  color: #e07bb5;
+  text-decoration: none;
+}
+
+.submenu-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  color: #e07bb5;
+  width: 86%; /* 全幅に配置 */
+  padding: 0 105px 0 72px; /* 左右にパディングを追加 */
+  position: relative; /* 疑似要素の位置を相対的に設定 */
+}
+
+.submenu-top::after {
+  content: '';
+  display: block;
+  width: 61%; /* 線の幅を調整 */
+  margin: 10px auto 0; /* 上下のマージンを調整 */
+  border-bottom: 1px solid #e07bb5; /* 下線を追加 */
+  position: absolute;
+  left: 15%; /* 左右の位置を調整 */
+  top: 88%;
+}
+
+.submenu-top-last {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  color: #e07bb5;
+  width: 86%; /* 全幅に配置 */
+  padding: 10% 105px 0 72px; /* 左右にパディングを追加 */
+  position: relative; /* 疑似要素の位置を相対的に設定 */
+}
+
+.submenu-top-last::after {
+  content: '';
+  display: block;
+  width: 61%; /* 線の幅を調整 */
+  margin: 10px auto 0; /* 上下のマージンを調整 */
+  border-bottom: 1px solid #e07bb5; /* 下線を追加 */
+  position: absolute;
+  left: 15%; /* 左右の位置を調整 */
+  top: 88%;
+}
+
+.submenu-top-text {
+  display: flex;
+  flex-direction: column;
+  text-align: left; /* 左寄せ */
+}
+
+.submenu-page-number {
+  display: flex;
+  flex-direction: column;
+  text-align: right; /* 右寄せ */
+}
+
+.submenu-top-text p,
+.submenu-page-number p {
+  margin: 0; /* 上下の余白を削除 */
+  padding: 10px 0;
+}
+
+.submenu-page-number p {
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 4.5px;
+}
+
+.submenu-top-eng {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 3.6px;
+}
+
+.submenu-top-jpn {
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 4.5px;
 }
 
 /********** view moreボタン **********/

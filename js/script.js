@@ -8,28 +8,41 @@ document.addEventListener('DOMContentLoaded', function () {
     menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
     // ハンバーガーアイコンの形状変更のトグル
     hamburger.classList.toggle('change');
+    // サブメニューも非表示にする
+    hideAllSubmenus();
+    // ボディのスクロールを切り替え
+    document.body.classList.toggle('no-scroll');
   });
 
   // サブメニューのトグル機能
-  var expandIcons = document.querySelectorAll('.hamburger-polygon');
-  expandIcons.forEach(function (icon) {
-    icon.addEventListener('click', function () {
-      var targetId = icon.getAttribute('data-target');
+  var submenuToggles = document.querySelectorAll(
+    '.hamburger-movies-polygon, .hamburger-lyrics-polygon, .hamburger-submenu-next-polygon, .hamburger-submenu-prev-polygon'
+  );
+  submenuToggles.forEach(function (toggle) {
+    toggle.addEventListener('click', function () {
+      var targetId = this.getAttribute('data-target');
       var submenu = document.getElementById(targetId);
       if (submenu) {
+        hideAllSubmenus(); // 他のサブメニューを非表示
         submenu.style.display =
           submenu.style.display === 'flex' ? 'none' : 'flex';
       }
     });
   });
 
-  // サブメニューオーバーレイのクリックで閉じる機能
-  var submenuOverlays = document.querySelectorAll('.submenu-overlay');
-  submenuOverlays.forEach(function (overlay) {
-    overlay.addEventListener('click', function () {
-      overlay.style.display = 'none';
+  // 全てのサブメニューを非表示にする関数
+  function hideAllSubmenus() {
+    var submenus = document.querySelectorAll('.submenu-overlay');
+    submenus.forEach(function (submenu) {
+      submenu.style.display = 'none';
     });
-  });
+  }
+  function hideAllSubmenus() {
+    var submenus = document.querySelectorAll('.submenu-overlay-last');
+    submenus.forEach(function (submenu) {
+      submenu.style.display = 'none';
+    });
+  }
 });
 
 /********** movie モーダルウインドウ ***********/
