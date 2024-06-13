@@ -50,10 +50,12 @@ function getCurrentUrl()
                             </div>
                             <div class="links-container">
                                 <li class="top-text"><a href="<?php echo home_url(''); ?>">movies</a></li>
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/polygon.svg" alt="" class="hamburger-polygon" data-target="movies-submenu">
                                 <li class="bottom-text"><a href="<?php echo home_url(); ?>">動画</a></li>
                             </div>
                             <div class="links-container">
                                 <li class="top-text"><a href="<?php echo home_url(''); ?>">lyrics</a></li>
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/polygon.svg" alt="" class="hamburger-polygon" data-target="lyrics-submenu">
                                 <li class="bottom-text"><a href="<?php echo home_url(); ?>">リリック</a></li>
                             </div>
                             <div class="links-container">
@@ -61,6 +63,26 @@ function getCurrentUrl()
                                 <li class="bottom-text"><a href="<?php echo home_url(); ?>">グッズ</a></li>
                             </div>
                         </ul>
+                        <div class="submenu-overlay" id="movies-submenu">
+                            <ul class="submenu">
+                                <li><a href="<?php echo home_url(); ?>">01 拗け</a></li>
+                                <li><a href="<?php echo home_url(); ?>">02 卒業</a></li>
+                                <li><a href="<?php echo home_url(); ?>">03 読書</a></li>
+                                <li><a href="<?php echo home_url(); ?>">04 夜明け</a></li>
+                                <li><a href="<?php echo home_url(); ?>">05 あいす</a></li>
+                                <li><a href="<?php echo home_url(); ?>">06 ハッピーエンド</a></li>
+                                <li><a href="<?php echo home_url(); ?>">07 ペルソナ</a></li>
+                                <li><a href="<?php echo home_url(); ?>">08 玻璃の心</a></li>
+                                <li><a href="<?php echo home_url(); ?>">09 かいせい</a></li>
+                                <li><a href="<?php echo home_url(); ?>">10 せんたく</a></li>
+                            </ul>
+                        </div>
+                        <div class="submenu-overlay" id="lyrics-submenu">
+                            <ul class="submenu">
+                                <li><a href="<?php echo home_url(); ?>">リリック1</a></li>
+                                <li><a href="<?php echo home_url(); ?>">リリック2</a></li>
+                            </ul>
+                        </div>
                         <div class="hamburger-sns">
                             <div class="hamburger-X-icon">
                                 <a href="">
@@ -80,6 +102,9 @@ function getCurrentUrl()
                             <div class="hamburger-tunecore-text">
                                 <a href="">tunecore</a>
                             </div>
+                        </div>
+                        <div class="contact-button">
+                            <a href="">お問い合わせ</a>
                         </div>
                     </div>
                 </nav>

@@ -122,7 +122,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
+  content: '';
   content: none;
 }
 
@@ -181,7 +181,7 @@ select {
 
 * {
   box-sizing: border-box;
-  font-family: "Hina Mincho";
+  font-family: 'Hina Mincho';
 }
 
 /********** ファーストビュー　レイアウト **********/
@@ -294,7 +294,6 @@ select {
 .main-container {
   position: relative;
   background: var(--base_1_500e70, #500e70);
-  height: 4000px;
 }
 
 .all-container {
@@ -324,7 +323,7 @@ select {
   line-height: normal;
   font-style: normal;
   font-weight: 400;
-  letter-spacing: 0.4rem;
+  letter-spacing: 0.5rem;
   text-align: center;
   padding: 10px 0;
   position: absolute;
@@ -337,16 +336,15 @@ select {
 /********** プロフィールコンテナ　レイアウト **********/
 
 .zabuton-beside {
+  width: 351px;
   height: 32px;
+  flex-shrink: 0;
   background: rgba(0, 0, 0, 0.5);
   position: absolute;
-  width: calc(100%+12px); /* 余白分を追加 */
-  top: 63px;
-  right: 46px;
-  left: -66px;
-  display: flex;
-  justify-content: center; /* 中央揃え */
-  align-items: center; /* 上下中央揃え */
+  top: 59px;
+  right: 42px;
+  z-index: 2; /* 座布団の上に表示されるように */
+  text-align: center;
 }
 
 .top-h2 {
@@ -356,14 +354,7 @@ select {
   font-weight: 400;
   line-height: normal;
   letter-spacing: 4.5px;
-  padding: 5px 0;
-  margin: 0;
-  z-index: 3; /* 横座布団の上に表示されるように */
-  text-align: center;
-}
-
-.top-h2 p {
-  margin-left: 134px;
+  padding: 5px 0 8px 93px;
 }
 
 .kana {
@@ -373,34 +364,24 @@ select {
   font-weight: 400;
   line-height: normal;
   letter-spacing: 4.5px;
-  padding: 5px 0;
-  position: relative;
-  z-index: 3; /* 横座布団の上に表示されるように */
-  flex: 0 0 auto; /* Flexbox内でのスペースを固定 */
-}
-
-.kana01 {
-  margin-right: 24px;
+  padding: 6px 0 0 97px;
 }
 
 .profile-container {
-  height: 103vh;
   padding: 20px;
   color: white;
   font-style: normal;
   line-height: normal;
   font-weight: 400;
-  text-align: center;
 }
 
 .profile-container ul {
   list-style: none;
-  padding: 0;
-  padding: 0% 10%;
+  padding-left: 30px;
 }
 
 .profile-container ul li {
-  width: 100%;
+  width: 251px;
   text-align: justify;
   font-size: 14px;
   line-height: 24px; /* 171.429% */
@@ -411,9 +392,8 @@ select {
   font-size: 8px;
   font-style: normal;
   font-weight: 400;
-  line-height: 14px; /* 300% */
+  line-height: 24px; /* 300% */
   letter-spacing: 1.2px;
-  text-align: left;
 }
 
 .profile-name {
@@ -424,120 +404,71 @@ select {
 }
 
 .profile-image {
-  margin: 100px 10% 20px auto;
-  width: 80%;
-  height: auto;
-  max-width: 190px;
+  margin: 100px 86px 41px 30px;
+  width: 210px;
+  height: 212px;
+  flex-shrink: 0;
 }
 
 /********** schedule レイアウト **********/
-
-.schedule-container {
-  padding: 10px;
-  height: 100%;
-}
-
 .zabuton-beside-2 {
+  width: 351px;
   height: 32px;
+  flex-shrink: 0;
   background: rgba(0, 0, 0, 0.5);
   position: absolute;
-  width: calc(100% + 12px); /* 余白分を追加 */
-  top: 773px;
-  right: 46px;
-  left: -66px;
-  display: flex;
-  justify-content: center; /* 中央揃え */
-  align-items: center; /* 上下中央揃え */
+  top: 815px;
+  right: 42px;
+  z-index: 2; /* 座布団の上に表示されるように */
+  text-align: center;
 }
 
 .kana02 {
-  position: absolute;
-  top: 695px;
-  left: -15px;
-  right: 0;
-  margin: 38px auto 0;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: 4.5px;
-  text-align: center; /* 中央揃え */
-  z-index: 3; /* 横座布団の上に表示されるように */
-}
-
-.schedule-h2 {
-  color: var(--accent_1_2, #e07bb5);
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: 4.5px;
-  text-align: center;
-  position: relative;
-  z-index: 3; /* 横座布団の上に表示されるように */
-  width: fit-content;
+  padding: 59px 164px 16px 115px;
 }
 
 p.no-schedule {
+  padding: 224px 80px 166px 70px;
   white-space: nowrap;
   font-size: 16px;
-  text-align: center; /* レスポンシブ対応のため中央揃え */
-  margin-top: 280px;
 }
 
 .text02 {
   left: -21px;
-  top: 940px;
+  top: 870px;
 }
 
 /********** movie レイアウト **********/
 
 .zabuton-beside-3 {
+  width: 351px;
   height: 32px;
+  flex-shrink: 0;
   background: rgba(0, 0, 0, 0.5);
   position: absolute;
-  width: calc(100% + 12px); /* 余白分を追加 */
   top: 1415px;
-  right: 46px;
-  left: -23%;
-  display: flex;
-  justify-content: center; /* 中央揃え */
-  align-items: center; /* 上下中央揃え */
+  right: 42px;
+  z-index: 2; /* 座布団の上に表示されるように */
+  text-align: center;
 }
 
 .text03 {
   left: -21px;
-  top: 1618px;
+  top: 1500px;
 }
 
 .kana03 {
-  position: absolute;
-  top: 1337px; /* 修正後の位置 */
-  left: 50%;
-  transform: translateX(-50%);
-  margin: 38px auto 0;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: 4.5px;
-  text-align: center; /* 中央揃え */
-  z-index: 3; /* 横座布団の上に表示されるように */
-}
-
-.movie-h2 {
-  padding: 5px 0 8px 38%;
-  text-align: center; /* テキストを中央揃え */
+  padding: 21px 177px 189px 157px;
+  position: relative;
 }
 
 .movie-thumbnail-content {
   position: absolute;
   top: 1500px;
-  right: 31%;
 }
 
 .movie-thumbnail-container {
-  padding: 0px 23% 50px;
+  padding: 0px 48px 50px;
 }
 
 .modal {
@@ -579,68 +510,11 @@ p.no-schedule {
   cursor: pointer;
 }
 
-/********** lyrics レイアウト **********/
-
-.zabuton-beside-4 {
-  width: 125%;
-  height: 32px;
-  flex-shrink: 0;
-  background: rgba(0, 0, 0, 0.5);
-  position: absolute;
-  top: 2225px;
-  right: 128px;
-  z-index: 2; /* 座布団の上に表示されるように */
-  text-align: center;
-}
-
-.lyrics-h2 {
-  padding: 5px 0 8px 298px;
-}
-
-.text04 {
-  left: -21px;
-  top: 2604px;
-}
-
-.kana04 {
-  padding: 0 137px 189px 130px;
-  position: relative;
-}
-
-.lyrics-container h3 {
-  width: 125%;
-  height: 30px;
-  flex-shrink: 0;
-  background: rgba(0, 0, 0, 0.5);
-  position: absolute;
-  top: 2305px;
-  left: 80px;
-}
-
-.lyrics-sub p {
-  display: flex;
-  padding-top: 3px;
-  width: 89px;
-  height: 22px;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 8px;
-  flex-shrink: 0;
-  color: var(--accent_1_2, #e07bb5);
-  font-family: "Hina Mincho";
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: 4.5px;
-  white-space: nowrap;
-}
-
 /********** フッター レイアウト **********/
 
 .footer-container {
   position: absolute;
-  width: 100%;
+  width: 393px;
   height: 100px;
   flex-shrink: 0;
   background: #2c0141;
