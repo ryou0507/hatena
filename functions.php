@@ -64,7 +64,12 @@ function custom_schedule_list_content()
             echo '<li class="schedule-item">';
             echo '<div class="schedule-date">' . get_the_date('Y.m.d') . '</div>';
             echo '<div class="schedule-title"><a href="' . get_permalink() . '">' . get_the_title() . '</a></div>';
+            echo '<div class="schedule-content-wrapper">';
             echo '<div class="schedule-content" data-content="' . esc_attr($content) . '">' . custom_excerpt_length($content, 40) . '</div>';
+            echo '<svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">';
+            echo '<path d="M1.25732 11.5146L6.51464 6.25733L1.25732 1.00002" stroke="white" stroke-width="1"/>';
+            echo '</svg>';
+            echo '</div>';
             echo '</li>';
         }
         echo '</ul>';

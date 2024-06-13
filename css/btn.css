@@ -250,7 +250,7 @@
 }
 
 .submenu-top::after {
-  content: '';
+  content: "";
   display: block;
   width: 61%; /* 線の幅を調整 */
   margin: 10px auto 0; /* 上下のマージンを調整 */
@@ -272,7 +272,7 @@
 }
 
 .submenu-top-last::after {
-  content: '';
+  content: "";
   display: block;
   width: 61%; /* 線の幅を調整 */
   margin: 10px auto 0; /* 上下のマージンを調整 */
@@ -328,7 +328,7 @@
 
 .btn-container {
   text-align: center;
-  margin-top: 224px;
+  margin-left: 14%;
 }
 
 .custom-btn {
@@ -360,7 +360,7 @@
 }
 
 .movie-btn-container {
-  padding: 466px 81px 57px 78px;
+  text-align: center;
 }
 
 /********** お問い合わせボタン **********/
@@ -386,4 +386,36 @@
 
 .contact-button:hover {
   background-color: #d5698e; /* ホバー時の背景色 */
+}
+
+/********** ページ下お問い合わせボタン **********/
+.ctc-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 41px;
+  margin-left: 14%;
+}
+
+.contact-btn {
+  width: 182px;
+  height: 33px;
+  flex-shrink: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: var(--accent_1_2, #e07bb5);
+  font-family: "Hina Mincho";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 4.5px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* drop shadow */
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.25);
+  /* drop shadow_2 */
+  box-shadow: 2px 2px 8px 0px #36094c;
 }
