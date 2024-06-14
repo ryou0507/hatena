@@ -88,7 +88,7 @@ body {
   line-height: 1;
   background: var(--base_1_500e70);
   margin: 0;
-  font-family: 'Hina Mincho', serif;
+  font-family: "Hina Mincho", serif;
 }
 
 article,
@@ -120,7 +120,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 
@@ -179,7 +179,7 @@ select {
 
 * {
   box-sizing: border-box;
-  font-family: 'Hina Mincho';
+  font-family: "Hina Mincho";
 }
 
 :root {
@@ -873,7 +873,7 @@ select {
 
 /********** moviesページ　レイアウト **********/
 .movies-all-container {
-  font-family: 'Hina Mincho';
+  font-family: "Hina Mincho";
 }
 
 .movies-firstview-section {
@@ -978,7 +978,7 @@ select {
 }
 
 .black-bar::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   width: 32px;
@@ -1017,6 +1017,7 @@ a.to-lyrics {
   margin-top: -15px;
   display: flex;
   justify-content: flex-end;
+  margin-left: 175px;
 }
 
 .video-container {
@@ -1056,4 +1057,91 @@ a.to-lyrics {
 
 .long-12 {
   margin-right: 5%;
+}
+
+/********** lyricsページ　レイアウト **********/
+.lyrics-page {
+  text-align: left;
+}
+
+.lyrics-page-container {
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 4.2px;
+  text-align: left;
+  margin-top: 32px;
+}
+
+.lyrics-page-title {
+  margin-bottom: 20px;
+}
+
+a.to-movie {
+  margin-top: 0;
+  margin-left: 175px;
+}
+
+/* 新しいクラスを追加してスタイルを上書き */
+.grid-container.custom {
+  display: grid;
+  grid-template-columns: 52px 1fr; /* 左側に黒いバー、右側にコンテンツ */
+  width: 100%;
+  padding: 10px 0; /* 上下のパディングを追加 */
+  position: relative;
+}
+
+.thumbnail-container.custom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  position: relative; /* 親要素の位置を相対位置に設定 */
+}
+
+.lyrics-page-title-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 13px; /* これで全体を下に移動 */
+}
+
+.lyrics-page-title.custom {
+  color: var(--accent_1_2, #e07bb5);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 4.5px;
+  margin: 0;
+  text-align: center; /* テキストを中央揃え */
+  z-index: 1; /* ザブトンの上に配置 */
+  padding: 0 10px 2px;
+}
+
+.lyrics-page-title-zabuton {
+  position: absolute;
+  top: 50%;
+  left: 24%;
+  width: 100%; /* ザブトンの幅を自由に調整 */
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.5); /* 背景色を調整 */
+  transform: translateY(-50%);
+  z-index: 0; /* テキストの背後に配置 */
+}
+
+.lyrics-page-title-zabuton-right {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: translateY(-50%);
+  z-index: 0;
+  right: 29%;
 }
