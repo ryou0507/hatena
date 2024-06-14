@@ -10,8 +10,6 @@ function load_custom_styles_and_scripts()
     wp_enqueue_script('script-js', get_template_directory_uri() . '/js/script.js', array('jquery'), null, true);
     // Googleフォントの読み込み
     wp_enqueue_style('google-font-hina-mincho', 'https://fonts.googleapis.com/css2?family=Hina+Mincho&display=swap');
-    // JavaScriptファイルの読み込み
-    wp_enqueue_script('script-js', get_template_directory_uri() . '/js/script.js', array('jquery'), null, true);
 }
 add_action('wp_enqueue_scripts', 'load_custom_styles_and_scripts');
 

@@ -14,7 +14,7 @@
   z-index: 2;
   position: absolute;
   top: -5px;
-  right: -22px;
+  right: 0px;
 }
 
 .close-area {
@@ -47,6 +47,7 @@
   flex-direction: column;
   justify-content: space-around;
   height: 20px; /* ハンバーガーボタンの高さ */
+  width: 35px; /* ハンバーガーボタンの幅 */
 }
 
 .header-left-line {
@@ -59,12 +60,12 @@
 }
 
 .hamburger.change .header-left-line:nth-child(1) {
-  transform: rotate(-45deg) translate(-5px, 6px); /* 上の線を-45度に回転 */
+  transform: rotate(-45deg) translate(-14px, 6px); /* 上の線を-45度に回転 */
   background-color: #e07bb5; /* 色を変更 */
 }
 
 .hamburger.change .header-left-line:nth-child(2) {
-  transform: rotate(45deg) translate(-5px, -6px); /* 下の線を45度に回転 */
+  transform: rotate(45deg) translate(-1px, 7px); /* 下の線を45度に回転 */
   background-color: #e07bb5; /* 色を変更 */
 }
 
