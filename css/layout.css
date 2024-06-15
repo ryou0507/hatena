@@ -191,6 +191,22 @@ html {
   scroll-behavior: smooth;
 }
 
+/********** 全体アニメーション **********/
+/* アニメーションCSS */
+.scroll-animate-left {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition:
+    transform 1s ease,
+    opacity 1s ease;
+  will-change: transform, opacity; /* レンダリングの最適化 */
+}
+
+.scroll-animate-left.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 /********** ファーストビュー　レイアウト **********/
 .firstview-container {
   height: 402px;
@@ -198,32 +214,6 @@ html {
   align-items: flex-start;
   justify-content: flex-start;
   position: relative;
-}
-
-.firstview-logo {
-  width: 153px;
-  height: 34px;
-  flex-shrink: 0;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  position: absolute;
-  /* 絶対位置指定 */
-  top: 0;
-  /* 上端 */
-  left: 0;
-  /* 左端 */
-  padding: 10px;
-  /* 余白調整 */
-}
-
-.jpn {
-  font-size: 14px;
-  letter-spacing: 4.2px;
-}
-
-.roman {
-  font-size: 10px;
 }
 
 .firstview-text {
@@ -286,8 +276,7 @@ html {
 
 .jacket-container img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
 }
 
 .jacket-container {
@@ -319,10 +308,12 @@ html {
 .profile-container {
   position: relative;
   width: 100%;
+  height: 100%;
   max-width: 800px;
-  margin: 0 auto 0 0;
-  padding-top: 60px;
+  margin: 0 auto;
+  padding-top: 30px;
   background: var(--base_1_500e70);
+  overflow: hidden; /* オーバーフローを隠す */
 }
 
 .vertical-zabuton {
@@ -354,16 +345,22 @@ html {
 .profile-header {
   position: relative;
   text-align: center;
+  overflow: hidden; /* アニメーション時に外に出る部分を隠すため */
+  padding-top: 60px; /* 上部にパディングを追加 */
 }
 
 .horizontal-zabuton {
   position: absolute;
   top: 50%;
-  left: 0;
+  left: -6%;
   width: 93%;
   height: 32px;
   background: rgba(0, 0, 0);
-  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition:
+    transform 1s ease,
+    opacity 1s ease;
 }
 
 .profile-subtitle {
@@ -373,9 +370,14 @@ html {
   letter-spacing: 3.6px;
   margin: 0;
   position: absolute;
-  top: -34px; /* 必要に応じて調整 */
-  left: 50%;
+  top: 7px;
+  left: 42%;
   transform: translateX(-50%);
+  opacity: 0;
+  transition:
+    transform 1s ease,
+    opacity 1s ease;
+  white-space: nowrap; /* テキストが消えないようにする */
 }
 
 .profile-title {
@@ -386,6 +388,11 @@ html {
   margin: 0;
   position: relative;
   padding-left: 54px;
+  top: -13px; /* タイトルの位置を調整 */
+  opacity: 0;
+  transition:
+    transform 1s ease,
+    opacity 1s ease;
 }
 
 .profile-content {
@@ -436,6 +443,21 @@ html {
   margin-bottom: 30%;
 }
 
+/* アニメーションCSS */
+.scroll-animate {
+  opacity: 0;
+  transform: translateX(100%);
+  transition:
+    transform 1s ease,
+    opacity 1s ease;
+  will-change: transform, opacity; /* レンダリングの最適化 */
+}
+
+.scroll-animate.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 /********** フッター レイアウト **********/
 
 .footer-container {
@@ -481,12 +503,14 @@ html {
   padding-top: 60px;
   background: var(--base_1_500e70);
   padding-bottom: 20px;
+  overflow: hidden; /* オーバーフローを隠す */
 }
 
 .schedule-header {
   position: relative;
   text-align: center;
   margin-bottom: 20px;
+  overflow: hidden; /* アニメーション時に外に出る部分を隠すため */
 }
 
 .schedule-title1 {
@@ -498,6 +522,12 @@ html {
   position: relative;
   padding-left: 50px;
   margin-bottom: 52px;
+  opacity: 0;
+  transform: translateX(100%);
+  transition:
+    transform 1s ease,
+    opacity 1s ease;
+  top: 42px; /* タイトルの位置を下に調整 */
 }
 
 .schedule-subtitle {
@@ -507,9 +537,14 @@ html {
   letter-spacing: 3.6px;
   margin: 0;
   position: absolute;
-  top: -34px; /* 必要に応じて調整 */
-  left: 50%;
+  left: 42%;
   transform: translateX(-50%);
+  opacity: 0;
+  transform: translateX(100%);
+  transition:
+    transform 1s ease,
+    opacity 1s ease;
+  top: 5px; /* サブタイトルの位置を下に調整 */
 }
 
 .schedule-content1 {
@@ -603,8 +638,8 @@ html {
 }
 
 .schedule-item {
-  margin-left: 16px;
-  margin-bottom: 30%;
+  margin-top: 10%;
+  margin: 10% 0 25% 16px;
 }
 
 .schedule-btn {
@@ -660,6 +695,25 @@ a.page-numbers {
   padding: 16px;
 }
 
+.schedule-btn svg {
+  margin-top: 25px;
+}
+
+/* アニメーションCSS */
+.scroll-animate {
+  opacity: 0;
+  transform: translateX(100%);
+  transition:
+    transform 1s ease,
+    opacity 1s ease;
+  will-change: transform, opacity; /* レンダリングの最適化 */
+}
+
+.scroll-animate.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 /********** 動画　レイアウト **********/
 .movie-container {
   position: relative;
@@ -672,7 +726,8 @@ a.page-numbers {
 }
 
 .movie {
-  width: 72%;
+  width: 78%;
+  top: -8px;
 }
 
 .movie-header {
@@ -689,8 +744,11 @@ a.page-numbers {
   margin: 0;
   position: absolute;
   top: -34px; /* 必要に応じて調整 */
-  left: 50%;
-  transform: translateX(-50%);
+  right: 37.5%;
+  transform: translateX(100%); /* 初期状態を右に設定 */
+  transition:
+    transform 1s ease,
+    opacity 1s ease; /* トランジションを追加 */
   padding-left: 40px;
 }
 
@@ -776,7 +834,8 @@ a.page-numbers {
 }
 
 .lyrics {
-  width: 80%;
+  width: 88%;
+  top: -7px;
 }
 
 .lyrics-header {
@@ -793,8 +852,8 @@ a.page-numbers {
   margin: 0;
   position: absolute;
   top: -34px; /* 必要に応じて調整 */
-  left: 50%;
-  transform: translateX(-50%);
+  left: 43%;
+  transform: translateX(100%);
   padding-left: 6px;
 }
 
@@ -833,12 +892,12 @@ a.page-numbers {
 
 .horizontal-zabuton.song {
   position: absolute;
-  top: 50%;
+  top: -6px;
   left: 14%;
   width: 100%;
   height: 32px;
   background: rgba(0, 0, 0);
-  transform: translateY(-50%);
+  transform: translateX(-100%);
 }
 
 .song-details {
@@ -887,6 +946,20 @@ a.page-numbers {
   margin-left: 80%;
 }
 
+/* アニメーションCSS */
+.scroll-animate-left {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition:
+    transform 1s ease,
+    opacity 1s ease;
+  will-change: transform, opacity; /* レンダリングの最適化 */
+}
+
+.scroll-animate-left.active {
+  opacity: 1;
+  transform: translateX(0);
+}
 /********** グッズ　レイアウト **********/
 
 .goods-container {
@@ -913,8 +986,8 @@ a.page-numbers {
   margin: 0;
   position: absolute;
   top: -34px; /* 必要に応じて調整 */
-  left: 50%;
-  transform: translateX(-50%);
+  left: 42%;
+  transform: translateX(100%);
   padding-left: 21px;
 }
 
@@ -938,7 +1011,7 @@ a.page-numbers {
 
 .goods-item {
   text-align: center;
-  margin: 4% 0 40px 13%;
+  margin: 4% 0 0 13%;
 }
 
 .goods-image-container {
@@ -976,6 +1049,11 @@ a.page-numbers {
   margin-top: 20px;
   max-width: 300px;
   margin: 0 auto;
+}
+
+.goods {
+  width: 85%;
+  top: -7px;
 }
 
 /********** moviesページ　レイアウト **********/

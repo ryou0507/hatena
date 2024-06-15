@@ -4,42 +4,153 @@
   width: 100%;
 }
 
+/* ヘッダー */
+.fixed {
+  position: fixed !important;
+  top: 0;
+  width: 100%;
+  z-index: 9000;
+  transition: top 10s ease-in-out; /* トランジションを追加 */
+}
+
 .header-container {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  padding: 0 20px;
-  color: black;
-  height: 60px; /* ヘッダーの高さ */
+  justify-content: space-between;
+  color: var(--accent_1_2, #e07bb5);
+  height: 40px;
   z-index: 2;
-  position: absolute;
-  top: -5px;
-  right: 0px;
+  position: relative;
+  width: 100%;
+  background-color: black;
+  padding: 0 13px;
 }
+
+.header-logo {
+  color: var(--accent_1_2, #e07bb5);
+  font-family: "Hina Mincho";
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: left;
+}
+
+.jap {
+  font-size: 14px;
+  letter-spacing: 4.2px;
+}
+
+.roman {
+  font-size: 7px;
+  letter-spacing: 2.1px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ここまでヘッダー */
 
 .close-area {
   position: fixed;
-  top: 9px;
-  right: 17px;
-  width: 60px;
-  height: 60px;
+  top: 10px; /* 上からの位置 */
+  right: 10px; /* 右からの位置 */
+  width: 35px;
+  height: 35px;
   background-color: transparent;
   cursor: pointer;
-  z-index: 1100;
+  z-index: 1300; /* 他の要素の上に表示されるように */
+}
+
+.close-area::before,
+.close-area::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 2px;
+  background-color: #e07bb5;
+  transform: translate(-50%, -50%);
+  animation: rotateBack 0.3s ease-in-out forwards; /* アニメーションの持続時間を0.3秒に短縮 */
+}
+
+.close-area::before {
+  animation-name: rotateBefore;
+  width: 35px;
+  height: 1px;
+}
+
+.close-area::after {
+  width: 35px;
+  height: 1px;
+  animation-name: rotateAfter;
+}
+
+.close-area:hover::before,
+.close-area:hover::after {
+  animation: rotateToPosition 0.01s ease-in-out forwards; /* アニメーションの持続時間を0.3秒に短縮 */
+}
+
+.close-area:hover::before {
+  animation-name: rotateToPositionBefore;
+}
+
+.close-area:hover::after {
+  animation-name: rotateToPositionAfter;
+}
+
+@keyframes rotateBefore {
+  from {
+    transform: translate(-50%, -50%) rotate(45deg) rotate(45deg); /* 45度に増加 */
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+}
+
+@keyframes rotateAfter {
+  from {
+    transform: translate(-50%, -50%) rotate(-45deg) rotate(-45deg); /* 45度に増加 */
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
+
+@keyframes rotateToPositionBefore {
+  from {
+    transform: translate(-50%, -50%) rotate(45deg) rotate(45deg); /* 45度に増加 */
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+}
+
+@keyframes rotateToPositionAfter {
+  from {
+    transform: translate(-50%, -50%) rotate(-45deg) rotate(-45deg); /* 45度に増加 */
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
 }
 
 .hamburger-wrapper {
-  position: fixed;
-  top: 10px; /* 上からの位置 */
-  right: 10px; /* 右からの位置 */
-  z-index: 1300; /* 他の要素の上に表示されるように */
+  position: relative; /* 相対位置に戻す */
+  z-index: auto; /* 自動に設定 */
+}
+
+.hamburger.change-wrapper {
+  position: relative; /* 相対位置に戻す */
+  z-index: auto; /* 自動に設定 */
 }
 
 .hamburger-btn {
   display: flex;
   align-items: center;
   cursor: pointer; /* クリック可能な要素のカーソル */
-  padding: 20px;
+  padding: 20px 0 20px 20px;
 }
 
 .hamburger {
@@ -48,25 +159,25 @@
   justify-content: space-around;
   height: 20px; /* ハンバーガーボタンの高さ */
   width: 35px; /* ハンバーガーボタンの幅 */
+  cursor: pointer;
 }
 
 .header-left-line {
   width: 35px; /* ラインの幅 */
   height: 1px; /* ラインの高さ */
-  background-color: black; /* ラインの色 */
+  background-color: rgba(224, 123, 181, 1); /* ラインの色 */
   border-radius: 3px;
   margin: 2px 0; /* ライン間の間隔 */
   z-index: 1001;
+  transition: all 0.3s ease; /* アニメーションを追加 */
+}
+/* 追加: ハンバーガーメニューが開いた時のアニメーション */
+.hamburger.change + .close-area::before {
+  transform: translate(-50%, -50%) rotate(-45deg); /* 回転を反転 */
 }
 
-.hamburger.change .header-left-line:nth-child(1) {
-  transform: rotate(-45deg) translate(-14px, 6px); /* 上の線を-45度に回転 */
-  background-color: #e07bb5; /* 色を変更 */
-}
-
-.hamburger.change .header-left-line:nth-child(2) {
-  transform: rotate(45deg) translate(-1px, 7px); /* 下の線を45度に回転 */
-  background-color: #e07bb5; /* 色を変更 */
+.hamburger.change + .close-area::after {
+  transform: translate(-50%, -50%) rotate(45deg); /* 回転を反転 */
 }
 
 .hamburger-menu {
