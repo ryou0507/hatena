@@ -88,7 +88,7 @@ body {
   line-height: 1;
   background: var(--base_1_500e70);
   margin: 0;
-  font-family: 'Hina Mincho', serif;
+  font-family: "Hina Mincho", serif;
 }
 
 article,
@@ -120,7 +120,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 
@@ -179,7 +179,7 @@ select {
 
 * {
   box-sizing: border-box;
-  font-family: 'Hina Mincho';
+  font-family: "Hina Mincho";
 }
 
 :root {
@@ -1087,7 +1087,7 @@ a.page-numbers {
 }
 
 .black-bar::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   width: 32px;
