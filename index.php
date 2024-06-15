@@ -44,7 +44,7 @@
     </div>
 </section>
 
-<section class="schedule-container">
+<section class="schedule-container" id="schedule">
     <div class="vertical-zabuton">
         <div class="vertical-zabuton-text">どんな一日も生き抜いただけで満点◎</div>
     </div>
@@ -54,11 +54,12 @@
         <h2 class="schedule-title1">スケジュール</h2>
     </div>
     <div class="schedule-content1">
-        <?php custom_schedule_list_content(); ?>
+        <?php echo do_shortcode('[schedule_list posts_per_page="2" show_pagination="false"]'); // トップページでは2件を表示 
+        ?>
     </div>
 
     <div class="btn-container">
-        <a href="" class="custom-btn">view more</a>
+        <a href="<?php echo home_url(); ?>/schedule/" class="custom-btn">view more</a>
     </div>
 </section>
 

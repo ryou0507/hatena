@@ -50,8 +50,8 @@ function getCurrentUrl()
                                 <li class="bottom-text"><a href="<?php echo home_url('/#profile'); ?>">プロフィール</a></li>
                             </div>
                             <div class="links-container">
-                                <li class="top-text"><a href="<?php echo home_url(''); ?>">schedule</a></li>
-                                <li class="bottom-text"><a href="<?php echo home_url(); ?>">スケジュール</a></li>
+                                <li class="top-text"><a href="<?php echo home_url('/#schedule'); ?>">schedule</a></li>
+                                <li class="bottom-text"><a href="<?php echo home_url('/#schedule'); ?>">スケジュール</a></li>
                             </div>
                             <div class="links-container">
                                 <li class="top-text"><a href="<?php echo home_url('/#movies'); ?>">movies</a></li>
