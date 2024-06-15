@@ -18,9 +18,22 @@ get_header(); // ヘッダーの読み込み
         </div>
     </section>
 
+    <section class="schedule-list-section">
+        <div class="schedule-list-content">
+            <div class="schedule-list-bar"></div>
+            <div class="schedule-list-container">
+                <?php
+                $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+                echo do_shortcode('[schedule_list posts_per_page="10" show_pagination="true"]'); // スケジュールページでは10件を表示
+                ?>
+            </div>
+        </div>
+    </section>
+</div>
 
 
 
 
 
-    <?php get_footer(); ?>
+
+<?php get_footer(); ?>
