@@ -205,7 +205,7 @@ get_header(); // ヘッダーの読み込み
                     <p class="thumbnail-title long-title-12">12　多分うまく笑えてないけど</p>
                     <div class="video-container">
                         <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/movies-12.png" alt="">
-                        <a href="https://www.youtube.com/watch?v=2v3T7fP_P2I" target="_blank"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/youtube-movies.png" alt="Play Icon" class="play-icon-movies"></a>
+                        <a href="https://www.youtube.com/watch?v=2v3T7fP_P2I" target="_blank"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/youtube-movies.png" alt="Play Icon" class="play-icon-movies icon-12"></a>
 
                     </div>
                     <a class="to-lyrics long-12" href="<?php echo home_url('/lyrics/#lyrics-12'); ?>">lyricsはこちら<svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
@@ -317,7 +317,7 @@ get_header(); // ヘッダーの読み込み
                     <p class="thumbnail-title long-title-12">19　今日まで生き抜いたキミへ</p>
                     <div class="video-container">
                         <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/movies-19.png" alt="">
-                        <a href="https://www.youtube.com/watch?v=cGgDIW-5QAo" target="_blank"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/youtube-movies.png" alt="Play Icon" class="play-icon-movies"></a>
+                        <a href="https://www.youtube.com/watch?v=cGgDIW-5QAo" target="_blank"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/youtube-movies.png" alt="Play Icon" class="play-icon-movies icon-12"></a>
 
                     </div>
                     <a class="to-lyrics long-12" href="<?php echo home_url('/lyrics/#lyrics-19'); ?>">lyricsはこちら<svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
@@ -346,10 +346,10 @@ get_header(); // ヘッダーの読み込み
             <div class="black-bar"></div>
             <div class="thumbnail-container" id="movies-21">
                 <div class="thumbnail-21">
-                    <p class="thumbnail-title long-title-14">21　キミがいる・・・、<br>僕に成る。</p>
+                    <p class="thumbnail-title long-title-14">21　キミがいる・・・、僕に成る。</p>
                     <div class="video-container">
                         <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/movies-21.png" alt="">
-                        <a href="https://www.youtube.com/watch?v=LvkTpAbeRP8" target="_blank"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/youtube-movies.png" alt="Play Icon" class="play-icon-movies"></a>
+                        <a href="https://www.youtube.com/watch?v=LvkTpAbeRP8" target="_blank"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/youtube-movies.png" alt="Play Icon" class="play-icon-movies icon-14"></a>
 
                     </div>
                     <a class="to-lyrics long-14" href="<?php echo home_url('/lyrics/#lyrics-21'); ?>">lyricsはこちら<svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">

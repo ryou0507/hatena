@@ -88,7 +88,7 @@ body {
   line-height: 1;
   background: var(--base_1_500e70);
   margin: 0;
-  font-family: "Hina Mincho", serif;
+  font-family: 'Hina Mincho', serif;
 }
 
 article,
@@ -120,7 +120,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
+  content: '';
   content: none;
 }
 
@@ -179,7 +179,7 @@ select {
 
 * {
   box-sizing: border-box;
-  font-family: "Hina Mincho";
+  font-family: 'Hina Mincho';
 }
 
 :root {
@@ -443,7 +443,7 @@ html {
   width: 100%;
   height: 100px;
   flex-shrink: 0;
-  background: #2c0141;
+  background: black;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -472,7 +472,7 @@ html {
   margin: 0;
 }
 
-/********** スケジュール　レイアウト **********/
+/********** スケジュール　スケジュールページ　レイアウト **********/
 .schedule-container {
   position: relative;
   width: 100%;
@@ -514,17 +514,40 @@ html {
 
 .schedule-content1 {
   text-align: left;
+  margin-left: 19%;
+}
+
+.schedule-list-content {
+  display: grid;
+  grid-template-columns: 52px 1fr; /* 32pxの黒いバーと20pxの余白 */
+  width: 100%;
+  padding: 0; /* 上下のパディングを追加 */
+  position: relative;
+}
+
+.schedule-list-bar {
+  background-color: rgba(0, 0, 0);
+  width: 32px; /* 黒いバーの幅を設定 */
+  height: auto;
+  margin-left: 20px; /* 黒いバーの左に20pxの余白を追加 */
+  align-self: stretch; /* 高さをコンテナに合わせる */
 }
 
 .custom-schedule-list {
   list-style: none;
-  margin-left: 97px;
   padding: 0; /* 余白をリセット */
+}
+
+.schedule-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
 }
 
 .schedule-date {
   color: #fff;
-  font-size: 16px;
+  font-size: 15px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -536,12 +559,18 @@ html {
   display: flex;
   align-items: center;
   width: 100%;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 3.3px;
+  margin-bottom: 8px;
 }
 
 .schedule-content-wrapper {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   width: 100%;
 }
 
@@ -554,26 +583,81 @@ html {
   line-height: normal;
   letter-spacing: 4.2px;
   text-decoration: none;
-  width: 229px;
+  width: 262px;
 }
 
 .schedule-content {
   word-wrap: break-word;
 }
 
-.schedule-item {
-  margin-bottom: 37px;
+.schedule-content,
+.schedule-remaining-content {
+  color: white;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 4.2px;
+  width: 262px;
+  word-wrap: break-word; /* テキストの折り返しを設定 */
 }
 
-.schedule-content-wrapper svg {
-  flex-shrink: 0;
-  width: 2%;
-  height: 2%;
-  stroke: var(--white, #fff);
-  stroke-width: 1px;
-  margin-left: 10px; /* テキストとアイコンの間にスペースを追加 */
-  margin-right: 13%;
-  margin-bottom: 6%;
+.schedule-item {
+  margin-left: 16px;
+  margin-bottom: 30%;
+}
+
+.schedule-btn {
+  margin-left: 40%;
+}
+
+.toggle-content-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.2em;
+  display: block;
+  text-align: center;
+}
+
+.google-map-link {
+  display: block;
+  color: #fff;
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 2.4px;
+  text-decoration: none;
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 198px;
+  margin-top: -9px;
+}
+
+.schedule-thumbnail {
+  margin-left: 18%;
+  margin-bottom: 18px;
+}
+
+.schedule-thumbnail img {
+  width: 9.375rem;
+  height: auto;
+}
+
+.pagination {
+  margin-left: 51%;
+}
+
+span.page-numbers.current {
+  color: white;
+}
+
+a.page-numbers {
+  text-decoration: none;
+  color: white;
+  padding: 16px;
 }
 
 /********** 動画　レイアウト **********/
@@ -1003,7 +1087,7 @@ html {
 }
 
 .black-bar::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   width: 32px;
@@ -1062,6 +1146,14 @@ a.to-lyrics {
   left: 56%;
   transform: translate(-50%, -50%);
   width: 12%;
+}
+
+img.play-icon-movies.icon-14 {
+  top: 42%;
+}
+
+img.play-icon-movies.icon-12 {
+  top: 54%;
 }
 
 .thumbnail-container svg {
