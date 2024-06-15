@@ -275,7 +275,7 @@
 }
 
 .submenu-top::after {
-  content: '';
+  content: "";
   display: block;
   width: 61%; /* 線の幅を調整 */
   margin: 10px auto 0; /* 上下のマージンを調整 */
@@ -298,7 +298,7 @@
 }
 
 .submenu-top-last::after {
-  content: '';
+  content: "";
   display: block;
   width: 61%; /* 線の幅を調整 */
   margin: 10px auto 0; /* 上下のマージンを調整 */
@@ -356,6 +356,7 @@ p.submenu-top-jap {
 .btn-container {
   text-align: center;
   margin-top: 14%;
+  margin-left: 14%;
 }
 
 .custom-btn {
@@ -424,13 +425,18 @@ p.submenu-top-jap {
   margin-left: 14%;
 }
 
+.ctc-container.custom {
+  margin-left: 0;
+  margin-bottom: 14px;
+}
+
 .contact-btn {
   width: 182px;
   height: 33px;
   flex-shrink: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0);
   color: var(--accent_1_2, #e07bb5);
-  font-family: 'Hina Mincho';
+  font-family: "Hina Mincho";
   font-size: 15px;
   font-style: normal;
   font-weight: 400;

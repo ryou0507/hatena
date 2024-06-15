@@ -19,7 +19,7 @@
     <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/jacket01.jpg" alt="" class="">
 </section>
 
-<section class="profile-container">
+<section class="profile-container" id="profile">
     <div class="vertical-zabuton">
         <div class="vertical-zabuton-text">何も捨ててしまわなくていいよおもいなら僕が預かるから</div>
     </div>
@@ -62,7 +62,7 @@
     </div>
 </section>
 
-<section class="movie-container">
+<section class="movie-container" id="movies">
     <div class="vertical-zabuton">
         <div class="vertical-zabuton-text">夢を人質に奪われた世界を取り戻せるかな</div>
     </div>
@@ -106,12 +106,12 @@
             </div>
         </div>
         <div class="btn-container">
-            <a href="" class="custom-btn">view more</a>
+            <a href="<?php echo home_url(); ?>/movies/" class="custom-btn">view more</a>
         </div>
     </div>
 </section>
 
-<section class="lyrics-container">
+<section class="lyrics-container" id="lyrics">
     <div class="vertical-zabuton">
         <div class="vertical-zabuton-text">夢を人質に奪われた世界を取り戻せるかな</div>
     </div>
@@ -133,7 +133,7 @@
                 誰かを信じることが怖くて<br>
                 一人を選んだの
             </p>
-            <a href="#" class="more-link">more ></a>
+            <a href="<?php echo home_url('/lyrics/#lyrics-01'); ?>" class="more-link">more ></a>
         </div>
     </div>
     <div class="lyrics-content">
@@ -149,7 +149,7 @@
                 恋話した自習もふざけ合った体育も<br>
                 全部今だけだから
             </p>
-            <a href="#" class="more-link">more ></a>
+            <a href="<?php echo home_url('/lyrics/#lyrics-02'); ?>" class="more-link">more ></a>
         </div>
     </div>
     <div class="lyrics-content">
@@ -165,11 +165,11 @@
                 失った視力、引き換えに得たものは<br>
                 自分を卑下する語彙ばかり。
             </p>
-            <a href="#" class="more-link">more ></a>
+            <a href="<?php echo home_url('/lyrics/#lyrics-03'); ?>" class="more-link">more ></a>
         </div>
     </div>
     <div class="btn-container">
-        <a href="" class="custom-btn">view more</a>
+        <a href="<?php echo home_url(); ?>/lyrics/" class="custom-btn">view more</a>
     </div>
 </section>
 
@@ -193,7 +193,7 @@
         </div>
     </div>
     <div class="btn-container">
-        <a href="" class="custom-btn">view more</a>
+        <a href="https://nplusy.booth.pm/" class="custom-btn">view more</a>
     </div>
     <div class="ctc-container">
         <a href="#" class="contact-btn">お問い合わせ</a>

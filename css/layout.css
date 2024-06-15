@@ -187,6 +187,10 @@ select {
   --accent_1_2: #e07bb5;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /********** ファーストビュー　レイアウト **********/
 .firstview-container {
   height: 402px;
@@ -909,9 +913,7 @@ select {
   font-weight: 400;
   line-height: normal;
   letter-spacing: 3.6px;
-  margin: 0;
-  margin-top: -32px;
-  margin-left: 31px;
+  margin: -32px 38px 0 66px;
 }
 
 .horizontal-bar {
@@ -1017,7 +1019,7 @@ a.to-lyrics {
   margin-top: -15px;
   display: flex;
   justify-content: flex-end;
-  margin-left: 175px;
+  margin-left: 122px;
 }
 
 .video-container {
@@ -1041,6 +1043,7 @@ a.to-lyrics {
 
 .thumbnail-container svg {
   margin-top: 4px;
+  margin-left: 4px;
 }
 
 .long-title-14 {
@@ -1075,6 +1078,10 @@ a.to-lyrics {
   margin-top: 32px;
 }
 
+.movies-subtitle.custom {
+  margin-left: 30px;
+}
+
 .lyrics-page-title {
   margin-bottom: 20px;
 }
@@ -1082,6 +1089,29 @@ a.to-lyrics {
 a.to-movie {
   margin-top: 0;
   margin-left: 175px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 4.2px;
+  white-space: nowrap;
+  display: inline-flex; /* インラインフレックスボックスに変更 */
+  align-items: center; /* 子要素を中央揃え */
+}
+
+a.to-movie span {
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px; /* 親要素と同じラインハイトに設定 */
+  letter-spacing: 3px;
+  margin-top: 5px;
+}
+
+a.to-movie svg {
+  margin-left: 4px; /* 必要に応じて調整 */
+  vertical-align: middle;
+  margin-top: 4px;
 }
 
 /* 新しいクラスを追加してスタイルを上書き */
@@ -1130,7 +1160,7 @@ a.to-movie {
   left: 24%;
   width: 100%; /* ザブトンの幅を自由に調整 */
   height: 30px;
-  background-color: rgba(0, 0, 0, 0.5); /* 背景色を調整 */
+  background-color: rgba(0, 0, 0); /* 背景色を調整 */
   transform: translateY(-50%);
   z-index: 0; /* テキストの背後に配置 */
 }
@@ -1140,8 +1170,109 @@ a.to-movie {
   top: 50%;
   width: 100%;
   height: 30px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0);
   transform: translateY(-50%);
   z-index: 0;
   right: 29%;
+}
+
+.lyrics-page-title-zabuton-right.lyrics06 {
+  right: 13%;
+  width: 115%;
+}
+
+.lyrics-page-title-zabuton.lyrics07 {
+  left: 22%;
+}
+
+.lyrics-page-title-zabuton-right.lyrics08 {
+  right: 20%;
+  width: 115%;
+}
+
+.lyrics-page-title-zabuton-right.lyrics10 {
+  right: 20%;
+  width: 115%;
+}
+
+.lyrics-page-title-zabuton.lyrics11 {
+  left: 0;
+  width: 113%;
+}
+
+.lyrics-page-title-zabuton-right.lyrics12 {
+  right: 3%;
+  width: 130%;
+}
+
+.lyrics-page-title-zabuton.lyrics13 {
+  left: 29%;
+  width: 100%;
+}
+
+.lyrics-page-title-zabuton-right.lyrics14 {
+  right: 3%;
+  width: 130%;
+}
+
+.lyrics-page-title-zabuton.lyrics15 {
+  left: 2%;
+  width: 109%;
+}
+
+.lyrics-page-title-zabuton-right.lyrics16 {
+  right: 15%;
+  width: 130%;
+}
+
+.lyrics-page-title-zabuton-right.lyrics18 {
+  right: 22%;
+  width: 130%;
+}
+
+.lyrics-page-title-zabuton.lyrics19 {
+  left: 0;
+  width: 109%;
+}
+
+.lyrics-page-title-zabuton-right.lyrics20 {
+  right: 14%;
+  width: 130%;
+}
+
+.lyrics-page-title-zabuton.lyrics21 {
+  left: -35%;
+  width: 144%;
+  height: 44px;
+}
+
+/********** lyricsページ　アコーディオン **********/
+.accordion-toggle {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  margin: 31px auto; /* 位置を調整 */
+  transition: transform 0.3s; /* 回転のトランジション */
+}
+
+.accordion-toggle svg {
+  transition: transform 0.3s;
+}
+
+.accordion-toggle.open {
+  transform: rotate(180deg); /* 回転の設定 */
+}
+
+.lyrics-page-container.hidden-part {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.2s ease; /* トランジションの追加 */
+}
+
+.lyrics-page-container.hidden-part.open {
+  display: block;
+  opacity: 1;
 }

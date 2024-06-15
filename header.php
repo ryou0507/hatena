@@ -46,20 +46,20 @@ function getCurrentUrl()
                                 <li class="bottom-text"><a href="<?php echo home_url('/'); ?>">ホーム</a></li>
                             </div>
                             <div class="links-container">
-                                <li class="top-text"><a href="<?php echo home_url(''); ?>">profile</a></li>
-                                <li class="bottom-text"><a href="<?php echo home_url(); ?>">プロフィール</a></li>
+                                <li class="top-text"><a href="<?php echo home_url('/#profile'); ?>">profile</a></li>
+                                <li class="bottom-text"><a href="<?php echo home_url('/#profile'); ?>">プロフィール</a></li>
                             </div>
                             <div class="links-container">
                                 <li class="top-text"><a href="<?php echo home_url(''); ?>">schedule</a></li>
                                 <li class="bottom-text"><a href="<?php echo home_url(); ?>">スケジュール</a></li>
                             </div>
                             <div class="links-container">
-                                <li class="top-text"><a href="<?php echo home_url(''); ?>">movies</a></li>
-                                <li class="bottom-text"><a href="<?php echo home_url(); ?>">動画</a></li>
+                                <li class="top-text"><a href="<?php echo home_url('/#movies'); ?>">movies</a></li>
+                                <li class="bottom-text"><a href="<?php echo home_url('/#movies'); ?>">動画</a></li>
                             </div>
                             <div class="links-container">
-                                <li class="top-text"><a href="<?php echo home_url(''); ?>">lyrics</a></li>
-                                <li class="bottom-text"><a href="<?php echo home_url(); ?>">リリック</a></li>
+                                <li class="top-text"><a href="<?php echo home_url('/#lyrics'); ?>">lyrics</a></li>
+                                <li class="bottom-text"><a href="<?php echo home_url('/#lyrics'); ?>">リリック</a></li>
                             </div>
                             <div class="links-container">
                                 <li class="top-text"><a href="https://nplusy.booth.pm/">goods</a></li>
@@ -83,7 +83,7 @@ function getCurrentUrl()
                                 </a>
                             </div>
                             <div class="hamburger-tunecore-text">
-                                <a href="">tunecore</a>
+                                <a href="https://www.tunecore.co.jp/artists/kakuriyohatena.?lang=ja">tunecore</a>
                             </div>
                         </div>
                         <div class="contact-button">
@@ -102,16 +102,16 @@ function getCurrentUrl()
                             </div>
 
                             <ul class="submenu">
-                                <li><a href="<?php echo home_url(); ?>">01 拗け</a></li>
-                                <li><a href="<?php echo home_url(); ?>">02 卒業</a></li>
-                                <li><a href="<?php echo home_url(); ?>">03 読書</a></li>
-                                <li><a href="<?php echo home_url(); ?>">04 夜明け</a></li>
-                                <li><a href="<?php echo home_url(); ?>">05 あいす</a></li>
-                                <li><a href="<?php echo home_url(); ?>">06 ハッピーエンド</a></li>
-                                <li><a href="<?php echo home_url(); ?>">07 ペルソナ</a></li>
-                                <li><a href="<?php echo home_url(); ?>">08 玻璃の心</a></li>
-                                <li><a href="<?php echo home_url(); ?>">09 かいせい</a></li>
-                                <li><a href="<?php echo home_url(); ?>">10 せんたく</a></li>
+                                <li><a href="<?php echo home_url('/movies/#movies-01'); ?>">01 拗け</a></li>
+                                <li><a href="<?php echo home_url('/movies/#movies-02'); ?>">02 卒業</a></li>
+                                <li><a href="<?php echo home_url('/movies/#movies-03'); ?>">03 読書</a></li>
+                                <li><a href="<?php echo home_url('/movies/#movies-04'); ?>">04 夜明け</a></li>
+                                <li><a href="<?php echo home_url('/movies/#movies-05'); ?>">05 あいす</a></li>
+                                <li><a href="<?php echo home_url('/movies/#movies-06'); ?>">06 ハッピーエンド</a></li>
+                                <li><a href="<?php echo home_url('/movies/#movies-07'); ?>">07 ペルソナ</a></li>
+                                <li><a href="<?php echo home_url('/movies/#movies-08'); ?>">08 玻璃の心</a></li>
+                                <li><a href="<?php echo home_url('/movies/#movies-09'); ?>">09 かいせい</a></li>
+                                <li><a href="<?php echo home_url('/movies/#movies-10'); ?>">10 せんたく</a></li>
                             </ul>
                             <div class="hamburger-submenu-sns">
                                 <div class="hamburger-X-icon">
@@ -130,7 +130,7 @@ function getCurrentUrl()
                                     </a>
                                 </div>
                                 <div class="hamburger-tunecore-text">
-                                    <a href="">tunecore</a>
+                                    <a href="https://www.tunecore.co.jp/artists/kakuriyohatena.?lang=ja">tunecore</a>
                                 </div>
                             </div>
                             <div class="contact-button">
@@ -148,16 +148,16 @@ function getCurrentUrl()
                                 </div>
                             </div>
                             <ul class="submenu">
-                                <li><a href="<?php echo home_url(); ?>">11 種明かしなんて嫌いだ</a></li>
-                                <li><a href="<?php echo home_url(); ?>">12 多分うまく笑えてないけど</a></li>
-                                <li><a href="<?php echo home_url(); ?>">13 匿名</a></li>
-                                <li><a href="<?php echo home_url(); ?>">14 むじょうけんこうふく</a></li>
-                                <li><a href="<?php echo home_url(); ?>">15 今日も生き抜いたキミへ</a></li>
-                                <li><a href="<?php echo home_url(); ?>">16 ステンドグラス</a></li>
-                                <li><a href="<?php echo home_url(); ?>">17 衷心より</a></li>
-                                <li><a href="<?php echo home_url(); ?>">18 PERSON</a></li>
-                                <li><a href="<?php echo home_url(); ?>">19 今日まで生き抜いたキミへ</a></li>
-                                <li><a href="<?php echo home_url(); ?>">20 妄想GoodNight</a></li>
+                                <li><a href="<?php echo home_url('/movies/#movies-11'); ?>">11 種明かしなんて嫌いだ</a></li>
+                                <li><a href="<?php echo home_url('/movies/#movies-12'); ?>">12 多分うまく笑えてないけど</a></li>
+                                <li><a href="<?php echo home_url('/movies/#movies-13'); ?>">13 匿名</a></li>
+                                <li><a href="<?php echo home_url('/movies/#movies-14'); ?>">14 むじょうけんこうふく</a></li>
+                                <li><a href="<?php echo home_url('/movies/#movies-15'); ?>">15 今日も生き抜いたキミへ</a></li>
+                                <li><a href="<?php echo home_url('/movies/#movies-16'); ?>">16 ステンドグラス</a></li>
+                                <li><a href="<?php echo home_url('/movies/#movies-17'); ?>">17 衷心より</a></li>
+                                <li><a href="<?php echo home_url('/movies/#movies-18'); ?>">18 PERSON</a></li>
+                                <li><a href="<?php echo home_url('/movies/#movies-19'); ?>">19 今日まで生き抜いたキミへ</a></li>
+                                <li><a href="<?php echo home_url('/movies/#movies-20'); ?>">20 妄想GoodNight</a></li>
                             </ul>
                             <div class="hamburger-submenu-sns">
                                 <div class="hamburger-X-icon">
@@ -176,7 +176,7 @@ function getCurrentUrl()
                                     </a>
                                 </div>
                                 <div class="hamburger-tunecore-text">
-                                    <a href="">tunecore</a>
+                                    <a href="https://www.tunecore.co.jp/artists/kakuriyohatena.?lang=ja">tunecore</a>
                                 </div>
                             </div>
                             <div class="contact-button">
@@ -194,7 +194,7 @@ function getCurrentUrl()
                                 </div>
                             </div>
                             <ul class="submenu">
-                                <li><a href="<?php echo home_url(); ?>">21 キミがいる・・・、僕に成る。</a></li>
+                                <li><a href="<?php echo home_url('/movies/#movies-21'); ?>">21 キミがいる・・・、僕に成る。</a></li>
                                 <li><a href="<?php echo home_url(); ?>"></a></li>
                                 <li><a href="<?php echo home_url(); ?>"></a></li>
                                 <li><a href="<?php echo home_url(); ?>"></a></li>
@@ -222,7 +222,7 @@ function getCurrentUrl()
                                     </a>
                                 </div>
                                 <div class="hamburger-tunecore-text">
-                                    <a href="">tunecore</a>
+                                    <a href="https://www.tunecore.co.jp/artists/kakuriyohatena.?lang=ja">tunecore</a>
                                 </div>
                             </div>
                             <div class="contact-button">
@@ -241,16 +241,16 @@ function getCurrentUrl()
                                 </div>
                             </div>
                             <ul class="submenu">
-                                <li><a href="<?php echo home_url(); ?>">01 拗け</a></li>
-                                <li><a href="<?php echo home_url(); ?>">02 卒業</a></li>
-                                <li><a href="<?php echo home_url(); ?>">03 読書</a></li>
-                                <li><a href="<?php echo home_url(); ?>">04 夜明け</a></li>
-                                <li><a href="<?php echo home_url(); ?>">05 あいす</a></li>
-                                <li><a href="<?php echo home_url(); ?>">06 ハッピーエンド</a></li>
-                                <li><a href="<?php echo home_url(); ?>">07 ペルソナ</a></li>
-                                <li><a href="<?php echo home_url(); ?>">08 玻璃の心</a></li>
-                                <li><a href="<?php echo home_url(); ?>">09 かいせい</a></li>
-                                <li><a href="<?php echo home_url(); ?>">10 せんたく</a></li>
+                                <li><a href="<?php echo home_url('/lyrics/#lyrics-01'); ?>">01 拗け</a></li>
+                                <li><a href="<?php echo home_url('/lyrics/#lyrics-02'); ?>">02 卒業</a></li>
+                                <li><a href="<?php echo home_url('/lyrics/#lyrics-03'); ?>">03 読書</a></li>
+                                <li><a href="<?php echo home_url('/lyrics/#lyrics-04'); ?>">04 夜明け</a></li>
+                                <li><a href="<?php echo home_url('/lyrics/#lyrics-05'); ?>">05 あいす</a></li>
+                                <li><a href="<?php echo home_url('/lyrics/#lyrics-06'); ?>">06 ハッピーエンド</a></li>
+                                <li><a href="<?php echo home_url('/lyrics/#lyrics-07'); ?>">07 ペルソナ</a></li>
+                                <li><a href="<?php echo home_url('/lyrics/#lyrics-08'); ?>">08 玻璃の心</a></li>
+                                <li><a href="<?php echo home_url('/lyrics/#lyrics-09'); ?>">09 かいせい</a></li>
+                                <li><a href="<?php echo home_url('/lyrics/#lyrics-10'); ?>">10 せんたく</a></li>
                             </ul>
                             <div class="hamburger-submenu-sns">
                                 <div class="hamburger-X-icon">
@@ -269,7 +269,7 @@ function getCurrentUrl()
                                     </a>
                                 </div>
                                 <div class="hamburger-tunecore-text">
-                                    <a href="">tunecore</a>
+                                    <a href="https://www.tunecore.co.jp/artists/kakuriyohatena.?lang=ja">tunecore</a>
                                 </div>
                             </div>
                             <div class="contact-button">
@@ -287,16 +287,16 @@ function getCurrentUrl()
                                 </div>
                             </div>
                             <ul class="submenu">
-                                <li><a href="<?php echo home_url(); ?>">11 種明かしなんて嫌いだ</a></li>
-                                <li><a href="<?php echo home_url(); ?>">12 多分うまく笑えてないけど</a></li>
-                                <li><a href="<?php echo home_url(); ?>">13 匿名</a></li>
-                                <li><a href="<?php echo home_url(); ?>">14 むじょうけんこうふく</a></li>
-                                <li><a href="<?php echo home_url(); ?>">15 今日も生き抜いたキミへ</a></li>
-                                <li><a href="<?php echo home_url(); ?>">16 ステンドグラス</a></li>
-                                <li><a href="<?php echo home_url(); ?>">17 衷心より</a></li>
-                                <li><a href="<?php echo home_url(); ?>">18 PERSON</a></li>
-                                <li><a href="<?php echo home_url(); ?>">19 今日まで生き抜いたキミへ</a></li>
-                                <li><a href="<?php echo home_url(); ?>">20 妄想GoodNight</a></li>
+                                <li><a href="<?php echo home_url('/lyrics/#lyrics-11'); ?>">11 種明かしなんて嫌いだ</a></li>
+                                <li><a href="<?php echo home_url('/lyrics/#lyrics-12'); ?>">12 多分うまく笑えてないけど</a></li>
+                                <li><a href="<?php echo home_url('/lyrics/#lyrics-13'); ?>">13 匿名</a></li>
+                                <li><a href="<?php echo home_url('/lyrics/#lyrics-14'); ?>">14 むじょうけんこうふく</a></li>
+                                <li><a href="<?php echo home_url('/lyrics/#lyrics-15'); ?>">15 今日も生き抜いたキミへ</a></li>
+                                <li><a href="<?php echo home_url('/lyrics/#lyrics-16'); ?>">16 ステンドグラス</a></li>
+                                <li><a href="<?php echo home_url('/lyrics/#lyrics-17'); ?>">17 衷心より</a></li>
+                                <li><a href="<?php echo home_url('/lyrics/#lyrics-18'); ?>">18 PERSON</a></li>
+                                <li><a href="<?php echo home_url('/lyrics/#lyrics-19'); ?>">19 今日まで生き抜いたキミへ</a></li>
+                                <li><a href="<?php echo home_url('/lyrics/#lyrics-20'); ?>">20 妄想GoodNight</a></li>
                             </ul>
                             <div class="hamburger-submenu-sns">
                                 <div class="hamburger-X-icon">
@@ -315,7 +315,7 @@ function getCurrentUrl()
                                     </a>
                                 </div>
                                 <div class="hamburger-tunecore-text">
-                                    <a href="">tunecore</a>
+                                    <a href="https://www.tunecore.co.jp/artists/kakuriyohatena.?lang=ja">tunecore</a>
                                 </div>
                             </div>
                             <div class="contact-button">
@@ -332,7 +332,7 @@ function getCurrentUrl()
                                 </div>
                             </div>
                             <ul class="submenu">
-                                <li><a href="<?php echo home_url(); ?>">21 キミがいる・・・、僕に成る。</a></li>
+                                <li><a href="<?php echo home_url('/lyrics/#lyrics-21'); ?>">21 キミがいる・・・、僕に成る。</a></li>
                                 <li><a href="<?php echo home_url(); ?>"></a></li>
                                 <li><a href="<?php echo home_url(); ?>"></a></li>
                                 <li><a href="<?php echo home_url(); ?>"></a></li>
@@ -360,7 +360,7 @@ function getCurrentUrl()
                                     </a>
                                 </div>
                                 <div class="hamburger-tunecore-text">
-                                    <a href="">tunecore</a>
+                                    <a href="https://www.tunecore.co.jp/artists/kakuriyohatena.?lang=ja">tunecore</a>
                                 </div>
                             </div>
                             <div class="contact-button">
