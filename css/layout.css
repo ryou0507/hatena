@@ -695,6 +695,12 @@ a.page-numbers {
   margin-top: 25px;
 }
 
+p.no-schedule {
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /********** 動画　レイアウト **********/
 .movie-container {
   position: relative;
