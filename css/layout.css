@@ -205,6 +205,17 @@ html {
   transform: translateX(0);
 }
 
+.scroll-up {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.scroll-up-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /********** ファーストビュー　レイアウト **********/
 .firstview-container {
   height: 402px;
@@ -306,12 +317,10 @@ html {
 .profile-container {
   position: relative;
   width: 100%;
-  height: 100%;
   max-width: 800px;
   margin: 0 auto;
   padding-top: 30px;
   background: var(--base_1_500e70);
-  overflow: hidden; /* オーバーフローを隠す */
 }
 
 .vertical-zabuton {
@@ -389,10 +398,11 @@ html {
 
 .profile-content {
   text-align: center;
+  overflow: hidden; /* 追加：コンテンツの見切れを防ぐ */
 }
 
 .profile-box {
-  margin: 0 9% 5% 97px;
+  margin: 0 9% 0 97px;
 }
 
 .profile-image {
@@ -432,7 +442,7 @@ html {
   padding: 0;
   text-align: left;
   margin-top: 20px;
-  margin-bottom: 30%;
+  margin-bottom: 0; /* 修正：余白を削除 */
 }
 
 /* アニメーションCSS */
@@ -685,19 +695,6 @@ a.page-numbers {
   margin-top: 25px;
 }
 
-/* アニメーションCSS */
-.scroll-animate {
-  opacity: 0;
-  transform: translateX(100%);
-  transition: transform 1s ease, opacity 1s ease;
-  will-change: transform, opacity; /* レンダリングの最適化 */
-}
-
-.scroll-animate.active {
-  opacity: 1;
-  transform: translateX(0);
-}
-
 /********** 動画　レイアウト **********/
 .movie-container {
   position: relative;
@@ -801,6 +798,10 @@ a.page-numbers {
   color: rgba(0, 0, 0);
   text-decoration: none;
   cursor: pointer;
+}
+
+.play-icon-movies.top {
+  transform: translate(-119%, -50%);
 }
 
 /********** リリック　レイアウト **********/
@@ -1117,6 +1118,7 @@ a.page-numbers {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  padding-top: 20px; /* 必要に応じて調整 */
 }
 
 .grid-container {
@@ -1201,9 +1203,21 @@ a.to-lyrics {
 .play-icon-movies {
   position: absolute;
   top: 50%;
-  left: 56%;
+  left: 50%;
   transform: translate(-50%, -50%);
   width: 12%;
+}
+
+.play-icon-movies.movies19 {
+  top: 55%;
+}
+
+.play-icon-movies.movies21 {
+  top: 41%;
+}
+
+.thumbnail-container svg.play-icon-movies {
+  margin: 0;
 }
 
 img.play-icon-movies.icon-14 {
@@ -1252,6 +1266,42 @@ img.play-icon-movies.icon-12 {
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+#movies-01::before,
+#movies-02::before,
+#movies-03::before,
+#movies-04::before,
+#movies-05::before,
+#movies-06::before,
+#movies-07::before,
+#movies-08::before,
+#movies-09::before,
+#movies-10::before,
+#movies-11::before,
+#movies-12::before,
+#movies-13::before,
+#movies-14::before,
+#movies-15::before,
+#movies-16::before,
+#movies-17::before,
+#movies-18::before,
+#movies-19::before,
+#movies-20::before,
+#movies-21::before {
+  content: "";
+  display: block;
+  height: 800px; /* 必要に応じて調整 */
+  margin-top: -800px; /* 必要に応じて調整 */
+  visibility: hidden;
+}
+
+.scroll-offset {
+  display: block;
+  content: "";
+  height: 80px; /* 適切なオフセットの高さを指定 */
+  margin-top: -80px; /* 同じ高さの負のマージンを指定 */
+  visibility: hidden; /* スペーサーを見えなくする */
 }
 
 /********** lyricsページ　レイアウト **********/
@@ -1348,22 +1398,22 @@ a.to-movie svg {
 
 .lyrics-page-title-zabuton {
   position: absolute;
-  top: 50%;
+  top: -11%;
   left: 24%;
   width: 100%; /* ザブトンの幅を自由に調整 */
   height: 30px;
   background-color: rgba(0, 0, 0); /* 背景色を調整 */
-  transform: translateY(-50%);
+  transform: translateX(-100%);
   z-index: 0; /* テキストの背後に配置 */
 }
 
 .lyrics-page-title-zabuton-right {
   position: absolute;
-  top: 50%;
+  top: -15%;
   width: 100%;
   height: 30px;
   background-color: rgba(0, 0, 0);
-  transform: translateY(-50%);
+  transform: translateX(100%);
   z-index: 0;
   right: 29%;
 }
@@ -1436,6 +1486,7 @@ a.to-movie svg {
   left: -35%;
   width: 144%;
   height: 44px;
+  top: 1%;
 }
 
 /********** lyricsページ　アコーディオン **********/

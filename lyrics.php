@@ -27,9 +27,9 @@ get_header(); // ヘッダーの読み込み
             <div class="thumbnail-container custom lyrics-page">
                 <div class="thumbnail-01" id="lyrics-01">
                     <div class="lyrics-page-title-wrapper">
-                        <span class="lyrics-page-title-zabuton"></span>
-                        <p class="lyrics-page-title custom">01 拗け</p>
-                        <span class="lyrics-page-title-zabuton"></span>
+                        <span class="lyrics-page-title-zabuton scroll-animate-left"></span>
+                        <p class="lyrics-page-title custom scroll-animate-left">01 拗け</p>
+                        <span class="lyrics-page-title-zabuton scroll-animate-left"></span>
                     </div>
                     <div class="lyrics-page-container initial-part">
                         <p>
@@ -90,9 +90,9 @@ get_header(); // ヘッダーの読み込み
             <div class="thumbnail-container custom lyrics-page">
                 <div class="thumbnail-01" id="lyrics-02">
                     <div class="lyrics-page-title-wrapper">
-                        <span class="lyrics-page-title-zabuton-right"></span>
-                        <p class="lyrics-page-title custom">02 卒業</p>
-                        <span class="lyrics-page-title-zabuton-right"></span>
+                        <span class="lyrics-page-title-zabuton-right scroll-animate"></span>
+                        <p class="lyrics-page-title custom scroll-animate">02 卒業</p>
+                        <span class="lyrics-page-title-zabuton-right scroll-animate"></span>
                     </div>
                     <div class="lyrics-page-container initial-part">
                         <p>
@@ -171,9 +171,9 @@ get_header(); // ヘッダーの読み込み
             <div class="thumbnail-container custom lyrics-page">
                 <div class="thumbnail-01" id="lyrics-03">
                     <div class="lyrics-page-title-wrapper">
-                        <span class="lyrics-page-title-zabuton"></span>
-                        <p class="lyrics-page-title custom">03 読書</p>
-                        <span class="lyrics-page-title-zabuton"></span>
+                        <span class="lyrics-page-title-zabuton scroll-animate-left"></span>
+                        <p class="lyrics-page-title custom scroll-animate-left">03 読書</p>
+                        <span class="lyrics-page-title-zabuton scroll-animate-left"></span>
                     </div>
                     <div class="lyrics-page-container initial-part">
                         <p>
@@ -236,9 +236,9 @@ get_header(); // ヘッダーの読み込み
             <div class="thumbnail-container custom lyrics-page">
                 <div class="thumbnail-01" id="lyrics-04">
                     <div class="lyrics-page-title-wrapper">
-                        <span class="lyrics-page-title-zabuton-right"></span>
-                        <p class="lyrics-page-title custom">04 夜明け</p>
-                        <span class="lyrics-page-title-zabuton-right"></span>
+                        <span class="lyrics-page-title-zabuton-right scroll-animate"></span>
+                        <p class="lyrics-page-title custom scroll-animate">04 夜明け</p>
+                        <span class="lyrics-page-title-zabuton-right scroll-animate"></span>
                     </div>
                     <div class="lyrics-page-container initial-part">
                         <p>
@@ -313,9 +313,9 @@ get_header(); // ヘッダーの読み込み
             <div class="thumbnail-container custom lyrics-page">
                 <div class="thumbnail-01" id="lyrics-05">
                     <div class="lyrics-page-title-wrapper">
-                        <span class="lyrics-page-title-zabuton"></span>
-                        <p class="lyrics-page-title custom">05 あいす</p>
-                        <span class="lyrics-page-title-zabuton"></span>
+                        <span class="lyrics-page-title-zabuton scroll-animate-left"></span>
+                        <p class="lyrics-page-title custom scroll-animate-left">05 あいす</p>
+                        <span class="lyrics-page-title-zabuton scroll-animate-left"></span>
                     </div>
                     <div class="lyrics-page-container initial-part">
                         <p>
@@ -358,9 +358,9 @@ get_header(); // ヘッダーの読み込み
             <div class="thumbnail-container custom lyrics-page">
                 <div class="thumbnail-01" id="lyrics-06">
                     <div class="lyrics-page-title-wrapper">
-                        <span class="lyrics-page-title-zabuton-right lyrics06"></span>
-                        <p class="lyrics-page-title custom">06 ハッピーエンド</p>
-                        <span class="lyrics-page-title-zabuton-right lyrics06"></span>
+                        <span class="lyrics-page-title-zabuton-right lyrics06 scroll-animate"></span>
+                        <p class="lyrics-page-title custom scroll-animate">06 ハッピーエンド</p>
+                        <span class="lyrics-page-title-zabuton-right lyrics06 scroll-animate"></span>
                     </div>
                     <div class="lyrics-page-container initial-part">
                         <p>
@@ -405,9 +405,9 @@ get_header(); // ヘッダーの読み込み
             <div class="thumbnail-container custom lyrics-page">
                 <div class="thumbnail-01" id="lyrics-07">
                     <div class="lyrics-page-title-wrapper">
-                        <span class="lyrics-page-title-zabuton lyrics07"></span>
-                        <p class="lyrics-page-title custom">07 ペルソナ</p>
-                        <span class="lyrics-page-title-zabuton lyrics07"></span>
+                        <span class="lyrics-page-title-zabuton lyrics07 scroll-animate-left"></span>
+                        <p class="lyrics-page-title custom scroll-animate-left">07 ペルソナ</p>
+                        <span class="lyrics-page-title-zabuton lyrics07 scroll-animate-left"></span>
                     </div>
                     <div class="lyrics-page-container initial-part">
                         <p>
@@ -468,9 +468,9 @@ get_header(); // ヘッダーの読み込み
             <div class="thumbnail-container custom lyrics-page">
                 <div class="thumbnail-01" id="lyrics-08">
                     <div class="lyrics-page-title-wrapper">
-                        <span class="lyrics-page-title-zabuton-right lyrics08"></span>
-                        <p class="lyrics-page-title custom">08 玻璃の心</p>
-                        <span class="lyrics-page-title-zabuton-right lyrics08"></span>
+                        <span class="lyrics-page-title-zabuton-right lyrics08 scroll-animate"></span>
+                        <p class="lyrics-page-title custom scroll-animate">08 玻璃の心</p>
+                        <span class="lyrics-page-title-zabuton-right lyrics08 scroll-animate"></span>
                     </div>
                     <div class="lyrics-page-container initial-part">
                         <p>
@@ -523,9 +523,9 @@ get_header(); // ヘッダーの読み込み
             <div class="thumbnail-container custom lyrics-page">
                 <div class="thumbnail-01" id="lyrics-09">
                     <div class="lyrics-page-title-wrapper">
-                        <span class="lyrics-page-title-zabuton"></span>
-                        <p class="lyrics-page-title custom">09 かいせい</p>
-                        <span class="lyrics-page-title-zabuton"></span>
+                        <span class="lyrics-page-title-zabuton scroll-animate-left"></span>
+                        <p class="lyrics-page-title custom scroll-animate-left">09 かいせい</p>
+                        <span class="lyrics-page-title-zabuton scroll-animate-left"></span>
                     </div>
                     <div class="lyrics-page-container initial-part">
                         <p>
@@ -585,9 +585,9 @@ get_header(); // ヘッダーの読み込み
             <div class="thumbnail-container custom lyrics-page">
                 <div class="thumbnail-01" id="lyrics-10">
                     <div class="lyrics-page-title-wrapper">
-                        <span class="lyrics-page-title-zabuton-right lyrics10"></span>
-                        <p class="lyrics-page-title custom">10 せんたく</p>
-                        <span class="lyrics-page-title-zabuton-right lyrics10"></span>
+                        <span class="lyrics-page-title-zabuton-right lyrics10 scroll-animate"></span>
+                        <p class="lyrics-page-title custom scroll-animate">10 せんたく</p>
+                        <span class="lyrics-page-title-zabuton-right lyrics10 scroll-animate"></span>
                     </div>
                     <div class="lyrics-page-container initial-part">
                         <p>
@@ -633,9 +633,9 @@ get_header(); // ヘッダーの読み込み
             <div class="thumbnail-container custom lyrics-page">
                 <div class="thumbnail-01" id="lyrics-11">
                     <div class="lyrics-page-title-wrapper">
-                        <span class="lyrics-page-title-zabuton lyrics11"></span>
-                        <p class="lyrics-page-title custom">11 種明かしなんて嫌いだ</p>
-                        <span class="lyrics-page-title-zabuton lyrics11"></span>
+                        <span class="lyrics-page-title-zabuton lyrics11 scroll-animate-left"></span>
+                        <p class="lyrics-page-title custom scroll-animate-left">11 種明かしなんて嫌いだ</p>
+                        <span class="lyrics-page-title-zabuton lyrics11 scroll-animate-left"></span>
                     </div>
                     <div class="lyrics-page-container initial-part">
                         <p>
@@ -706,9 +706,9 @@ get_header(); // ヘッダーの読み込み
             <div class="thumbnail-container custom lyrics-page">
                 <div class="thumbnail-01" id="lyrics-12">
                     <div class="lyrics-page-title-wrapper">
-                        <span class="lyrics-page-title-zabuton-right lyrics12"></span>
-                        <p class="lyrics-page-title custom">12 多分うまく笑えてないけど</p>
-                        <span class="lyrics-page-title-zabuton-right lyrics12"></span>
+                        <span class="lyrics-page-title-zabuton-right lyrics12 scroll-animate"></span>
+                        <p class="lyrics-page-title custom scroll-animate">12 多分うまく笑えてないけど</p>
+                        <span class="lyrics-page-title-zabuton-right lyrics12 scroll-animate"></span>
                     </div>
                     <div class="lyrics-page-container initial-part">
                         <p>
@@ -762,9 +762,9 @@ get_header(); // ヘッダーの読み込み
             <div class="thumbnail-container custom lyrics-page">
                 <div class="thumbnail-01" id="lyrics-13">
                     <div class="lyrics-page-title-wrapper">
-                        <span class="lyrics-page-title-zabuton lyrics13"></span>
-                        <p class="lyrics-page-title custom">13 匿名</p>
-                        <span class="lyrics-page-title-zabuton lyrics13"></span>
+                        <span class="lyrics-page-title-zabuton lyrics13 scroll-animate-left"></span>
+                        <p class="lyrics-page-title custom scroll-animate-left">13 匿名</p>
+                        <span class="lyrics-page-title-zabuton lyrics13 scroll-animate-left"></span>
                     </div>
                     <div class="lyrics-page-container initial-part">
                         <p>
@@ -825,9 +825,9 @@ get_header(); // ヘッダーの読み込み
             <div class="thumbnail-container custom lyrics-page">
                 <div class="thumbnail-01" id="lyrics-14">
                     <div class="lyrics-page-title-wrapper">
-                        <span class="lyrics-page-title-zabuton-right lyrics14"></span>
-                        <p class="lyrics-page-title custom">14 むじょうけんこうふく</p>
-                        <span class="lyrics-page-title-zabuton-right lyrics14"></span>
+                        <span class="lyrics-page-title-zabuton-right lyrics14 scroll-animate"></span>
+                        <p class="lyrics-page-title custom scroll-animate">14 むじょうけんこうふく</p>
+                        <span class="lyrics-page-title-zabuton-right lyrics14 scroll-animate"></span>
                     </div>
                     <div class="lyrics-page-container initial-part">
                         <p>
@@ -897,9 +897,9 @@ get_header(); // ヘッダーの読み込み
             <div class="thumbnail-container custom lyrics-page">
                 <div class="thumbnail-01" id="lyrics-15">
                     <div class="lyrics-page-title-wrapper">
-                        <span class="lyrics-page-title-zabuton lyrics15"></span>
-                        <p class="lyrics-page-title custom">15 今日も生き抜いたキミへ</p>
-                        <span class="lyrics-page-title-zabuton lyrics15"></span>
+                        <span class="lyrics-page-title-zabuton lyrics15 scroll-animate-left"></span>
+                        <p class="lyrics-page-title custom scroll-animate-left">15 今日も生き抜いたキミへ</p>
+                        <span class="lyrics-page-title-zabuton lyrics15 scroll-animate-left"></span>
                     </div>
                     <div class="lyrics-page-container initial-part">
                         <p>
@@ -956,9 +956,9 @@ get_header(); // ヘッダーの読み込み
             <div class="thumbnail-container custom lyrics-page">
                 <div class="thumbnail-01" id="lyrics-16">
                     <div class="lyrics-page-title-wrapper">
-                        <span class="lyrics-page-title-zabuton-right lyrics16"></span>
-                        <p class="lyrics-page-title custom">16 ステンドグラス</p>
-                        <span class="lyrics-page-title-zabuton-right lyrics16"></span>
+                        <span class="lyrics-page-title-zabuton-right lyrics16 scroll-animate"></span>
+                        <p class="lyrics-page-title custom scroll-animate">16 ステンドグラス</p>
+                        <span class="lyrics-page-title-zabuton-right lyrics16 scroll-animate"></span>
                     </div>
                     <div class="lyrics-page-container initial-part">
                         <p>
@@ -1032,9 +1032,9 @@ get_header(); // ヘッダーの読み込み
             <div class="thumbnail-container custom lyrics-page">
                 <div class="thumbnail-01" id="lyrics-17">
                     <div class="lyrics-page-title-wrapper">
-                        <span class="lyrics-page-title-zabuton"></span>
-                        <p class="lyrics-page-title custom">17 衷心より</p>
-                        <span class="lyrics-page-title-zabuton"></span>
+                        <span class="lyrics-page-title-zabuton scroll-animate-left"></span>
+                        <p class="lyrics-page-title custom scroll-animate-left">17 衷心より</p>
+                        <span class="lyrics-page-title-zabuton scroll-animate-left"></span>
                     </div>
                     <div class="lyrics-page-container initial-part">
                         <p>
@@ -1104,9 +1104,9 @@ get_header(); // ヘッダーの読み込み
             <div class="thumbnail-container custom lyrics-page">
                 <div class="thumbnail-01" id="lyrics-18">
                     <div class="lyrics-page-title-wrapper">
-                        <span class="lyrics-page-title-zabuton-right lyrics18"></span>
-                        <p class="lyrics-page-title custom">18 PERSON</p>
-                        <span class="lyrics-page-title-zabuton-right lyrics18"></span>
+                        <span class="lyrics-page-title-zabuton-right lyrics18 scroll-animate"></span>
+                        <p class="lyrics-page-title custom scroll-animate">18 PERSON</p>
+                        <span class="lyrics-page-title-zabuton-right lyrics18 scroll-animate"></span>
                     </div>
                     <div class="lyrics-page-container initial-part">
                         <p>
@@ -1177,9 +1177,9 @@ get_header(); // ヘッダーの読み込み
             <div class="thumbnail-container custom lyrics-page">
                 <div class="thumbnail-01" id="lyrics-19">
                     <div class="lyrics-page-title-wrapper">
-                        <span class="lyrics-page-title-zabuton lyrics19"></span>
-                        <p class="lyrics-page-title custom">19 今日まで生き抜いたキミへ</p>
-                        <span class="lyrics-page-title-zabuton lyrics19"></span>
+                        <span class="lyrics-page-title-zabuton lyrics19 scroll-animate-left"></span>
+                        <p class="lyrics-page-title custom scroll-animate-left">19 今日まで生き抜いたキミへ</p>
+                        <span class="lyrics-page-title-zabuton lyrics19 scroll-animate-left"></span>
                     </div>
                     <div class="lyrics-page-container initial-part">
                         <p>
@@ -1231,9 +1231,9 @@ get_header(); // ヘッダーの読み込み
             <div class="thumbnail-container custom lyrics-page">
                 <div class="thumbnail-01" id="lyrics-20">
                     <div class="lyrics-page-title-wrapper">
-                        <span class="lyrics-page-title-zabuton-right lyrics20"></span>
-                        <p class="lyrics-page-title custom">20 妄想GoodNight</p>
-                        <span class="lyrics-page-title-zabuton-right lyrics20"></span>
+                        <span class="lyrics-page-title-zabuton-right lyrics20 scroll-animate"></span>
+                        <p class="lyrics-page-title custom scroll-animate">20 妄想GoodNight</p>
+                        <span class="lyrics-page-title-zabuton-right lyrics20 scroll-animate"></span>
                     </div>
                     <div class="lyrics-page-container initial-part">
                         <p>
@@ -1287,9 +1287,9 @@ get_header(); // ヘッダーの読み込み
             <div class="thumbnail-container custom lyrics-page">
                 <div class="thumbnail-01" id="lyrics-21">
                     <div class="lyrics-page-title-wrapper">
-                        <span class="lyrics-page-title-zabuton lyrics21"></span>
-                        <p class="lyrics-page-title custom">21 キミがいる・・・、<br>僕に成る。</p>
-                        <span class="lyrics-page-title-zabuton lyrics21"></span>
+                        <span class="lyrics-page-title-zabuton lyrics21 scroll-animate-left"></span>
+                        <p class="lyrics-page-title custom scroll-animate-left">21 キミがいる・・・、<br>僕に成る。</p>
+                        <span class="lyrics-page-title-zabuton lyrics21 scroll-animate-left"></span>
                     </div>
                     <div class="lyrics-page-container initial-part">
                         <p>

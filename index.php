@@ -25,16 +25,16 @@
         <h2 class="profile-title scroll-animate">プロフィール</h2>
     </div>
     <div class="profile-content">
-        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/profile.png" alt="" class="profile-image">
+        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/profile.png" alt="" class="profile-image scroll-up">
         <div class="profile-box">
-            <div class="profile-name">
+            <div class="profile-name scroll-up">
                 <p class="furigana">かくりよ</p>
                 <p class="main-name">隠世はてな</p>
             </div>
             <ul class="profile-description">
-                <li>匿名と陰鬱をコンセプトとして、2020年7月に活動を開始。</li><br>
-                <li>2022年には初のワンマンライブでチケットをソールドアウト。</li><br>
-                <li>現在は弾き語りライブ、クラブイベントなど、ソロアーティストとしてステージに立っている。</li>
+                <li class="scroll-up">匿名と陰鬱をコンセプトとして、2020年7月に活動を開始。</li><br>
+                <li class="scroll-up">2022年には初のワンマンライブでチケットをソールドアウト。</li><br>
+                <li class="scroll-up">現在は弾き語りライブ、クラブイベントなど、ソロアーティストとしてステージに立っている。</li>
             </ul>
         </div>
     </div>
@@ -49,7 +49,7 @@
         <p class="schedule-subtitle scroll-animate">schedule</p>
         <h2 class="schedule-title1 scroll-animate">スケジュール</h2>
     </div>
-    <div class="schedule-content1">
+    <div class="schedule-content1 scroll-up">
         <?php echo do_shortcode('[schedule_list posts_per_page="2" show_pagination="false"]'); // トップページでは2件を表示 
         ?>
     </div>
@@ -70,9 +70,12 @@
     </div>
 
     <div class="movie-thumbnail-content">
-        <div class="movie-thumbnail-container">
+        <div class="movie-thumbnail-container scroll-up">
             <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/movie-1.png" alt="" class="movie-thumbnail" id="thumbnail-1">
-            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/youtube-movies.png" alt="Play Icon" class="play-icon-overlay">
+            <svg class="play-icon-movies top" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+                <circle cx="25" cy="25" r="25" fill="black" fill-opacity="0.5" />
+                <path d="M33.5 24.134C34.1667 24.5189 34.1667 25.4811 33.5 25.866L21.5 32.7942C20.8333 33.1791 20 32.698 20 31.9282V18.0718C20 17.302 20.8333 16.8209 21.5 17.2058L33.5 24.134Z" fill="white" />
+            </svg>
         </div>
         <div id="videoModal-1" class="modal">
             <div class="modal-content">
@@ -81,9 +84,12 @@
             </div>
         </div>
 
-        <div class="movie-thumbnail-container">
+        <div class="movie-thumbnail-container scroll-up">
             <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/movie-2.png" alt="" class="movie-thumbnail" id="thumbnail-2">
-            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/youtube-movies.png" alt="Play Icon" class="play-icon-overlay">
+            <svg class="play-icon-movies top" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+                <circle cx="25" cy="25" r="25" fill="black" fill-opacity="0.5" />
+                <path d="M33.5 24.134C34.1667 24.5189 34.1667 25.4811 33.5 25.866L21.5 32.7942C20.8333 33.1791 20 32.698 20 31.9282V18.0718C20 17.302 20.8333 16.8209 21.5 17.2058L33.5 24.134Z" fill="white" />
+            </svg>
         </div>
         <div id="videoModal-2" class="modal">
             <div class="modal-content">
@@ -91,10 +97,12 @@
                 <iframe id="video-2" width="320" height="180" src="https://www.youtube.com/embed/hq_3UqFaXFE?si=N06ZSHoDfHZKVfZm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
-
-        <div class="movie-thumbnail-container">
+        <div class="movie-thumbnail-container scroll-up">
             <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/movie-3.png" alt="" class="movie-thumbnail" id="thumbnail-3">
-            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/youtube-movies.png" alt="Play Icon" class="play-icon-overlay">
+            <svg class="play-icon-movies top" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+                <circle cx="25" cy="25" r="25" fill="black" fill-opacity="0.5" />
+                <path d="M33.5 24.134C34.1667 24.5189 34.1667 25.4811 33.5 25.866L21.5 32.7942C20.8333 33.1791 20 32.698 20 31.9282V18.0718C20 17.302 20.8333 16.8209 21.5 17.2058L33.5 24.134Z" fill="white" />
+            </svg>
         </div>
         <div id="videoModal-3" class="modal">
             <div class="modal-content">
@@ -180,7 +188,7 @@
         <h2 class="goods-title scroll-animate">グッズ</h2>
     </div>
     <div class="goods-content">
-        <div class="goods-item">
+        <div class="goods-item scroll-up">
             <div class="goods-image-container">
                 <svg xmlns="http://www.w3.org/2000/svg" width="167" height="167" viewBox="0 0 167 167" fill="none">
                     <circle cx="83.5" cy="83.5" r="83.5" fill="black" />

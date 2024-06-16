@@ -44,6 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
       body.style.top = `-${scrollPosition}px`;
       menu.style.display = "block";
       body.classList.add("no-scroll");
+      hideHamburgerLines(); // ハンバーガーメニューを開いたときに線を非表示
     }
     hamburger.classList.toggle("change");
     hideAllSubmenus();
@@ -129,9 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var headerLeftLines = document.querySelectorAll(".header-left-line");
   headerLeftLines.forEach(function (line) {
     line.addEventListener("click", function () {
-      headerLeftLines.forEach(function (line) {
-        line.style.display = "none";
-      });
+      hideHamburgerLines();
     });
   });
 
@@ -142,6 +141,14 @@ document.addEventListener("DOMContentLoaded", function () {
       line.style.display = "block";
     });
   }
+
+  // ハンバーガーメニューを開いたときに線を非表示にする関数
+  function hideHamburgerLines() {
+    var headerLeftLines = document.querySelectorAll(".header-left-line");
+    headerLeftLines.forEach(function (line) {
+      line.style.display = "none";
+    });
+  }
 });
 
 /********** movie モーダルウインドウ ***********/
@@ -149,28 +156,36 @@ document.addEventListener("DOMContentLoaded", function () {
   function setupModal(thumbnailId, modalId, videoId) {
     var modal = document.getElementById(modalId);
     var thumbnail = document.getElementById(thumbnailId);
+    var svgIcon = thumbnail.nextElementSibling; // SVGアイコンを取得
     var span = modal.getElementsByClassName("close")[0];
     var video = document.getElementById(videoId);
 
-    thumbnail.onclick = function () {
+    function openModal(event) {
+      modal.style.display = "block";
       modal.classList.add("show");
-    };
+      document.body.style.overflow = "hidden";
+    }
 
-    span.onclick = function () {
+    function closeModal() {
       modal.classList.remove("show");
+      setTimeout(function () {
+        modal.style.display = "none";
+        document.body.style.overflow = "auto";
+      }, 300); // トランジション時間を考慮
       video.contentWindow.postMessage(
         '{"event":"command","func":"pauseVideo","args":""}',
         "*"
       );
-    };
+    }
+
+    thumbnail.addEventListener("click", openModal);
+    svgIcon.addEventListener("click", openModal);
+
+    span.onclick = closeModal;
 
     window.onclick = function (event) {
       if (event.target == modal) {
-        modal.classList.remove("show");
-        video.contentWindow.postMessage(
-          '{"event":"command","func":"pauseVideo","args":""}',
-          "*"
-        );
+        closeModal();
       }
     };
   }
@@ -277,64 +292,35 @@ document.addEventListener("DOMContentLoaded", function () {
   animateOnScroll(); // Initial check in case elements are already in view
 });
 
+/********** 下から上へアニメーション ********** */
 document.addEventListener("DOMContentLoaded", function () {
-  // ページ内リンクのクリックイベントを監視
-  var anchorLinks = document.querySelectorAll('a[href^="#"]');
+  var scrollElements = document.querySelectorAll(".scroll-up");
 
-  anchorLinks.forEach(function (link) {
-    link.addEventListener("click", function (event) {
-      var targetId = link.getAttribute("href").substring(1); // 先頭の#を取り除く
-      var targetElement = document.getElementById(targetId);
+  var elementInView = function (element, offset = 100) {
+    var elementTop = element.getBoundingClientRect().top;
+    return (
+      elementTop <=
+      (window.innerHeight || document.documentElement.clientHeight) - offset
+    );
+  };
 
-      if (targetElement) {
-        event.preventDefault();
+  var displayScrollElement = function (element) {
+    element.classList.add("scroll-up-active");
+  };
 
-        // ヘッダーの高さを取得（例: 40px）
-        var headerHeight =
-          document.querySelector(".header-container").offsetHeight;
-        // 追加のオフセットを設定（例: 10px）
-        var additionalOffset = 10;
-
-        // 現在のスクロール位置を取得
-        var elementPosition = targetElement.getBoundingClientRect().top;
-        var offsetPosition =
-          elementPosition +
-          window.pageYOffset -
-          headerHeight -
-          additionalOffset;
-
-        // スムーススクロールを実行
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: "smooth",
-        });
+  var handleScrollAnimation = function () {
+    scrollElements.forEach(function (el) {
+      if (elementInView(el, 100)) {
+        displayScrollElement(el);
       }
     });
+  };
+
+  window.addEventListener("scroll", function () {
+    handleScrollAnimation();
   });
 
-  // 追加: ページ読み込み後のハッシュ処理
-  if (window.location.hash) {
-    var targetId = window.location.hash.substring(1);
-    var targetElement = document.getElementById(targetId);
-
-    if (targetElement) {
-      setTimeout(function () {
-        var headerHeight =
-          document.querySelector(".header-container").offsetHeight;
-        var additionalOffset = 70;
-        var elementPosition = targetElement.getBoundingClientRect().top;
-        var offsetPosition =
-          elementPosition +
-          window.pageYOffset -
-          headerHeight -
-          additionalOffset;
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: "smooth",
-        });
-      }, 100); // 少し遅延を入れてスクロールを調整
-    }
-  }
+  handleScrollAnimation();
 });
 
 /********** ページIDジャンプ **********/
@@ -353,8 +339,8 @@ document.addEventListener("DOMContentLoaded", function () {
         // ヘッダーの高さを取得（例: 40px）
         var headerHeight =
           document.querySelector(".header-container").offsetHeight;
-        // 追加のオフセットを設定（例: 20px）
-        var additionalOffset = 40; // この値を増やすことでさらに上にスクロール
+        // 追加のオフセットを設定（例: 60px）
+        var additionalOffset = 20; // この値を調整してさらに上にスクロール
 
         // 現在のスクロール位置を取得
         var elementPosition = targetElement.getBoundingClientRect().top;
@@ -369,6 +355,15 @@ document.addEventListener("DOMContentLoaded", function () {
           top: offsetPosition,
           behavior: "smooth",
         });
+
+        // スクロールアップアニメーションを適用
+        setTimeout(function () {
+          targetElement.classList.add("scroll-up-active");
+        }, 500); // スクロールアニメーションの後にアクティブクラスを追加
+
+        // 余白を動的に調整
+        document.querySelector(".movies-thumbnail-section").style.paddingTop =
+          "80px";
       }
     });
   });
@@ -382,7 +377,7 @@ document.addEventListener("DOMContentLoaded", function () {
       setTimeout(function () {
         var headerHeight =
           document.querySelector(".header-container").offsetHeight;
-        var additionalOffset = 20; // この値を増やすことでさらに上にスクロール
+        var additionalOffset = 40; // この値を調整してさらに上にスクロール
         var elementPosition = targetElement.getBoundingClientRect().top;
         var offsetPosition =
           elementPosition +
@@ -393,6 +388,16 @@ document.addEventListener("DOMContentLoaded", function () {
           top: offsetPosition,
           behavior: "smooth",
         });
+
+        // スクロールアップアニメーションを適用
+        setTimeout(function () {
+          targetElement.classList.add("scroll-up-active");
+        }, 500); // スクロールアニメーションの後にアクティブクラスを追加
+
+        // 余白を動的に調整
+        document.querySelector(
+          ".movies-thumbnail-section.custom"
+        ).style.paddingTop = "120px";
       }, 100); // 少し遅延を入れてスクロールを調整
     }
   }
