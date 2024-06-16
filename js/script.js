@@ -336,3 +336,39 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 });
+
+/********** お問い合わせページ チケット予約選択時 **********/
+document.getElementById('category').addEventListener('change', function () {
+  var additionalFields = document.getElementById('additional-fields');
+  additionalFields.innerHTML = ''; // 既存の追加フィールドをクリア
+
+  if (this.value === 'ticket') {
+    var liveInfoField = `
+          <div class="input-grid-container">
+              <div class="black-bar"></div>
+              <div class="input-content">
+                  <label for="liveInfo" class="text-area">ライブ情報</label>
+                  <select name="liveInfo" id="liveInfo">
+                      <option value="">選択してください</option>
+                      <option value="shinjuku">新宿Cat's hole</option>
+                      <option value="other1">○○○○</option>
+                      <option value="other2">○○○○</option>
+                      <option value="other3">○○○○</option>
+                  </select>
+              </div>
+          </div>
+          <div class="input-grid-container">
+              <div class="black-bar"></div>
+              <div class="input-content">
+                  <label for="ticketCount" class="text-area">チケット枚数</label>
+                  <select name="ticketCount" id="ticketCount">
+                      <option value="">選択してください</option>
+                      <option value="1">1枚</option>
+                      <option value="2">2枚</option>
+                  </select>
+              </div>
+          </div>
+      `;
+    additionalFields.innerHTML = liveInfoField;
+  }
+});
