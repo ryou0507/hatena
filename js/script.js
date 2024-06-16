@@ -337,12 +337,73 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-/********** お問い合わせページ チケット予約選択時 **********/
-document.getElementById('category').addEventListener('change', function () {
-  var additionalFields = document.getElementById('additional-fields');
-  additionalFields.innerHTML = ''; // 既存の追加フィールドをクリア
+/********** ページIDジャンプ **********/
+document.addEventListener("DOMContentLoaded", function () {
+  // ページ内リンクのクリックイベントを監視
+  var anchorLinks = document.querySelectorAll('a[href^="#"]');
 
-  if (this.value === 'ticket') {
+  anchorLinks.forEach(function (link) {
+    link.addEventListener("click", function (event) {
+      var targetId = link.getAttribute("href").substring(1); // 先頭の#を取り除く
+      var targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        event.preventDefault();
+
+        // ヘッダーの高さを取得（例: 40px）
+        var headerHeight =
+          document.querySelector(".header-container").offsetHeight;
+        // 追加のオフセットを設定（例: 20px）
+        var additionalOffset = 40; // この値を増やすことでさらに上にスクロール
+
+        // 現在のスクロール位置を取得
+        var elementPosition = targetElement.getBoundingClientRect().top;
+        var offsetPosition =
+          elementPosition +
+          window.pageYOffset -
+          headerHeight -
+          additionalOffset;
+
+        // スムーススクロールを実行
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
+    });
+  });
+
+  // 追加: ページ読み込み後のハッシュ処理
+  if (window.location.hash) {
+    var targetId = window.location.hash.substring(1);
+    var targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      setTimeout(function () {
+        var headerHeight =
+          document.querySelector(".header-container").offsetHeight;
+        var additionalOffset = 20; // この値を増やすことでさらに上にスクロール
+        var elementPosition = targetElement.getBoundingClientRect().top;
+        var offsetPosition =
+          elementPosition +
+          window.pageYOffset -
+          headerHeight -
+          additionalOffset;
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }, 100); // 少し遅延を入れてスクロールを調整
+    }
+  }
+});
+
+/********** お問い合わせページ チケット予約選択時 **********/
+document.getElementById("category").addEventListener("change", function () {
+  var additionalFields = document.getElementById("additional-fields");
+  additionalFields.innerHTML = ""; // 既存の追加フィールドをクリア
+
+  if (this.value === "ticket") {
     var liveInfoField = `
           <div class="input-grid-container">
               <div class="black-bar"></div>
