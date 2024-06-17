@@ -1,19 +1,24 @@
-<section class="firstview-container" style="background-image: url('<?php echo esc_url(get_template_directory_uri()); ?>/images/firstview.png'); background-color: #500E70; background-blend-mode: multiply; background-size: cover; background-position: center;">
-    <div class="firstview-text">
-        <div class="vertical-text right-text">辛いよね、私も一緒。</div>
-        <div class="vertical-text center-text">そんなときの拠り所。</div>
-        <div class="vertical-text left-text">
-            <p>隠世はてな</p>
+<!-- SP トップページ -->
+
+
+<div class="sp-index-all-container">
+
+    <section class="firstview-container" style="background-image: url('<?php echo esc_url(get_template_directory_uri()); ?>/images/firstview.png'); background-color: #500E70; background-blend-mode: multiply; background-size: cover; background-position: center;">
+        <div class="firstview-text">
+            <div class="vertical-text right-text">辛いよね、私も一緒。</div>
+            <div class="vertical-text center-text">そんなときの拠り所。</div>
+            <div class="vertical-text left-text">
+                <p>隠世はてな</p>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="jacket-container">
-    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/jacket01.jpg" alt="" class="">
-</section>
+    <section class="jacket-container">
+        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/jacket01.jpg" alt="" class="">
+    </section>
 
-<?php get_header(); // ヘッダーの読み込み 
-?>
+    <?php get_header(); // ヘッダーの読み込み 
+    ?>
 
 <section class="profile-container" id="profile">
     <div class="vertical-zabuton">
@@ -54,20 +59,20 @@
         ?>
     </div>
 
-    <div class="btn-container">
-        <a href="<?php echo home_url(); ?>/schedule/" class="custom-btn">view more</a>
-    </div>
-</section>
+        <div class="btn-container">
+            <a href="<?php echo home_url(); ?>/schedule/" class="custom-btn">view more</a>
+        </div>
+    </section>
 
-<section class="movie-container" id="movies">
-    <div class="vertical-zabuton">
-        <div class="vertical-zabuton-text">夢を人質に奪われた世界を取り戻せるかな</div>
-    </div>
-    <div class="movie-header">
-        <div class="horizontal-zabuton movie scroll-animate"></div>
-        <p class="movie-subtitle scroll-animate">movies</p>
-        <h2 class="movie-title scroll-animate">動画</h2>
-    </div>
+    <section class="movie-container" id="movies">
+        <div class="vertical-zabuton">
+            <div class="vertical-zabuton-text">夢を人質に奪われた世界を取り戻せるかな</div>
+        </div>
+        <div class="movie-header">
+            <div class="horizontal-zabuton movie scroll-animate"></div>
+            <p class="movie-subtitle scroll-animate">movies</p>
+            <h2 class="movie-title scroll-animate">動画</h2>
+        </div>
 
     <div class="movie-thumbnail-content">
         <div class="movie-thumbnail-container scroll-up">
@@ -204,6 +209,67 @@
         <a href="<?php echo home_url('/inquiry'); ?>" class="contact-btn">お問い合わせ</a>
     </div>
 </section>
+</div>
 
+<!-- PC トップページ -->
+<div class="pc-index-all-container">
+    <?php get_header(); // ヘッダーの読み込み 
+    ?>
+
+    <section class="pc-firstview-section">
+        <div class="pc-firstview-container">
+            <div class="firstview-left-container" style="background-image: url('<?php echo esc_url(get_template_directory_uri()); ?>/images/pc-firstview-left.png'); background-color: #500E70; background-blend-mode: multiply; background-size: cover; background-position: center;">
+                <div class="pc-firstview-text">
+                    <div class="pc-vertical-text pc-right-text">辛いよね、私も一緒。</div>
+                    <div class="pc-vertical-text pc-center-text">そんなときの拠り所。</div>
+                    <div class="pc-vertical-text pc-left-text">
+                        <p>隠世はてな</p>
+                    </div>
+                </div>
+            </div>
+            <div class="firstview-right-container">
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/pc-firstview-right.png" alt="" class="">
+                <div class="pc-firstview-nav">
+                    <div class="pc-nav-text">
+                        <a href="<?php echo home_url(); ?>/schedule/">schedule</a>
+                        <a href="<?php echo home_url(); ?>/movies/">movie</a>
+                        <a href="<?php echo home_url(); ?>/lyrics/">lyrics</a>
+                        <a href="https://nplusy.booth.pm/">goods</a>
+                        <a href="<?php echo home_url(); ?>/inquiry/">contact</a>
+                    </div>
+                    <div class="pc-nav-sns">
+                        <div class="pc-nav-X-icon">
+                            <a href="https://x.com/hatena_ny">
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/pc-nav-x.png" alt="X icon" class="pc-nav-X-img" />
+                            </a>
+                        </div>
+                        <div class="pc-nav-youtube-icon">
+                            <a href="https://www.youtube.com/@kakuriyohatena">
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/pc-nav-youtube.png" alt="youtube icon" class="pc-nav-youtube-img" />
+                            </a>
+                        </div>
+                        <div class="pc-nav-tiktok-icon">
+                            <a href="">
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/pc-nav-tictok.png" alt="tiktok icon" class="pc-nav-tiktok-img" />
+                            </a>
+                        </div>
+                        <div class="pc-nav-tunecore-text">
+                            <a href="https://www.tunecore.co.jp/artists/kakuriyohatena.?lang=ja">tunecore</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pc-profile-section"></section>
+
+    <section class="pc-schedule-section"></section>
+
+    <section class="pc-movie-section"></section>
+
+    <section class="lyrics-section"></section>
+
+</div>
 
 <?php get_footer(); ?>

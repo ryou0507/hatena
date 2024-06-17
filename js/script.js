@@ -406,7 +406,7 @@ document.addEventListener("DOMContentLoaded", function () {
           additionalOffset;
         window.scrollTo({
           top: offsetPosition,
-          behavior: "smooth",
+          behavior: 'smooth',
         });
 
         // スクロールアップアニメーションを適用
@@ -424,37 +424,95 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /********** お問い合わせページ チケット予約選択時 **********/
-document.getElementById("category").addEventListener("change", function () {
-  var additionalFields = document.getElementById("additional-fields");
-  additionalFields.innerHTML = ""; // 既存の追加フィールドをクリア
+document.addEventListener('DOMContentLoaded', function () {
+  // HTMLのデータ属性からURLを取得
+  var imagePaths = document.getElementById('image-paths');
+  var polygon4Url = imagePaths.getAttribute('data-polygon4-url');
+  var polygon3Url = imagePaths.getAttribute('data-polygon3-url');
 
-  if (this.value === "ticket") {
-    var liveInfoField = `
-          <div class="input-grid-container">
-              <div class="black-bar"></div>
-              <div class="input-content">
-                  <label for="liveInfo" class="text-area">ライブ情報</label>
-                  <select name="liveInfo" id="liveInfo">
-                      <option value="">選択してください</option>
-                      <option value="shinjuku">新宿Cat's hole</option>
-                      <option value="other1">○○○○</option>
-                      <option value="other2">○○○○</option>
-                      <option value="other3">○○○○</option>
-                  </select>
+  console.log('Polygon 4 URL:', polygon4Url);
+  console.log('Polygon 3 URL:', polygon3Url);
+
+  document.getElementById('category').addEventListener('change', function () {
+    var additionalFields = document.getElementById('additional-fields');
+    additionalFields.innerHTML = ''; // 既存の追加フィールドをクリア
+
+    if (this.value === 'ticket') {
+      var liveInfoField = `
+              <div class="input-grid-container">
+                  <div class="black-bar"></div>
+                  <div class="input-content">
+                      <label for="liveInfo" class="text-area">ライブ情報</label>
+                      <select name="liveInfo" id="liveInfo">
+                          <option value="">選択してください</option>
+                          <option value="shinjuku">新宿Cat's hole</option>
+                          <option value="other1">○○○○</option>
+                          <option value="other2">○○○○</option>
+                          <option value="other3">○○○○</option>
+                      </select>
+                      <img src="${polygon4Url}" id="dropdown-icon-liveInfo" style="position: absolute; right: 35px; top: 70%; transform: translateY(-50%); cursor: pointer;" />
+                  </div>
               </div>
-          </div>
-          <div class="input-grid-container">
-              <div class="black-bar"></div>
-              <div class="input-content">
-                  <label for="ticketCount" class="text-area">チケット枚数</label>
-                  <select name="ticketCount" id="ticketCount">
-                      <option value="">選択してください</option>
-                      <option value="1">1枚</option>
-                      <option value="2">2枚</option>
-                  </select>
+              <div class="input-grid-container">
+                  <div class="black-bar"></div>
+                  <div class="input-content">
+                      <label for="ticketCount" class="text-area">チケット枚数</label>
+                      <select name="ticketCount" id="ticketCount">
+                          <option value="">選択してください</option>
+                          <option value="1">1枚</option>
+                          <option value="2">2枚</option>
+                      </select>
+                      <img src="${polygon4Url}" id="dropdown-icon-ticketCount" style="position: absolute; right: 35px; top: 70%; transform: translateY(-50%); cursor: pointer;" />
+
+                  </div>
               </div>
-          </div>
-      `;
-    additionalFields.innerHTML = liveInfoField;
-  }
+          `;
+      additionalFields.innerHTML = liveInfoField;
+
+      // イベントリスナーを追加
+      document
+        .getElementById('dropdown-icon-liveInfo')
+        .addEventListener('click', function () {
+          document.getElementById('liveInfo').click();
+        });
+
+      document
+        .getElementById('dropdown-icon-ticketCount-up')
+        .addEventListener('click', function () {
+          document.getElementById('ticketCount').click();
+        });
+
+      document
+        .getElementById('dropdown-icon-ticketCount-down')
+        .addEventListener('click', function () {
+          document.getElementById('ticketCount').click();
+        });
+    }
+  });
+
+  document
+    .getElementById('dropdown-icon')
+    .addEventListener('click', function () {
+      document.getElementById('category').click(); // クリックイベントをトリガーしてデフォルトのプルダウンを表示
+    });
+
+  document
+    .getElementById('goToConfirmation')
+    .addEventListener('click', function () {
+      var formElement = document.getElementById('contactForm');
+
+      // フォームデータをJSON形式に変換
+      var formData = new FormData(formElement);
+      var object = {};
+      formData.forEach(function (value, key) {
+        object[key] = value;
+      });
+      var json = JSON.stringify(object);
+
+      // セッションストレージにJSONデータを保存
+      sessionStorage.setItem('formData', json);
+
+      // confirmationに移動
+      window.location.href = '<?php echo home_url(); ?>/confirmation/';
+    });
 });
