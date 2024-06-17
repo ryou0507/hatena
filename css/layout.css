@@ -88,7 +88,7 @@ body {
   line-height: 1;
   background: var(--base_1_500e70);
   margin: 0;
-  font-family: 'Hina Mincho', serif;
+  font-family: "Hina Mincho", serif;
 }
 
 article,
@@ -120,7 +120,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 
@@ -179,7 +179,7 @@ select {
 
 * {
   box-sizing: border-box;
-  font-family: 'Hina Mincho';
+  font-family: "Hina Mincho";
 }
 
 :root {
@@ -190,7 +190,6 @@ select {
 html {
   scroll-behavior: smooth;
 }
-
 /********** SP PC 切り替え **********/
 .sp-index-all-container {
   display: block;
@@ -208,7 +207,6 @@ html {
     display: block;
   }
 }
-
 /********** 全体アニメーション **********/
 /* アニメーションCSS */
 .scroll-animate-left {
@@ -223,7 +221,18 @@ html {
   transform: translateX(0);
 }
 
-/********** SPファーストビュー　レイアウト **********/
+.scroll-up {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.scroll-up-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/********** ファーストビュー　レイアウト **********/
 .firstview-container {
   height: 402px;
   display: flex;
@@ -320,17 +329,14 @@ html {
     transform: translateY(0);
   }
 }
-
 /********** プロフィール　レイアウト **********/
 .profile-container {
   position: relative;
   width: 100%;
-  height: 100%;
   max-width: 800px;
   margin: 0 auto;
   padding-top: 30px;
   background: var(--base_1_500e70);
-  overflow: hidden; /* オーバーフローを隠す */
 }
 
 .vertical-zabuton {
@@ -408,10 +414,11 @@ html {
 
 .profile-content {
   text-align: center;
+  overflow: hidden; /* 追加：コンテンツの見切れを防ぐ */
 }
 
 .profile-box {
-  margin: 0 9% 5% 97px;
+  margin: 0 9% 0 97px;
 }
 
 .profile-image {
@@ -451,7 +458,7 @@ html {
   padding: 0;
   text-align: left;
   margin-top: 20px;
-  margin-bottom: 30%;
+  margin-bottom: 0; /* 修正：余白を削除 */
 }
 
 /* アニメーションCSS */
@@ -704,19 +711,20 @@ a.page-numbers {
   margin-top: 25px;
 }
 
-/* アニメーションCSS */
-.scroll-animate {
-  opacity: 0;
-  transform: translateX(100%);
-  transition: transform 1s ease, opacity 1s ease;
-  will-change: transform, opacity; /* レンダリングの最適化 */
+p.no-schedule {
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.scroll-animate.active {
-  opacity: 1;
-  transform: translateX(0);
+.movies-subtitle.schedule {
+  padding-right: 54px;
 }
 
+.schedule-list-section p.no-schedule {
+  padding-left: 36px;
+}
 /********** 動画　レイアウト **********/
 .movie-container {
   position: relative;
@@ -795,7 +803,7 @@ a.page-numbers {
   overflow: auto;
   background-color: rgba(255, 255, 255, 0.8);
   opacity: 0;
-  transition: opacity 1s ease-in-out; /* トランジションの速度を1秒に設定 */
+  transition: opacity 0.3s ease-in-out; /* トランジションの速度を1秒に設定 */
 }
 
 .modal.show {
@@ -820,6 +828,10 @@ a.page-numbers {
   color: rgba(0, 0, 0);
   text-decoration: none;
   cursor: pointer;
+}
+
+.play-icon-movies.top {
+  transform: translate(-119%, -50%);
 }
 
 /********** リリック　レイアウト **********/
@@ -1057,7 +1069,7 @@ a.page-numbers {
 
 /********** moviesページ　レイアウト **********/
 .movies-all-container {
-  font-family: 'Hina Mincho';
+  font-family: "Hina Mincho";
   overflow: hidden; /* アニメーション時に外に出る部分を隠すため */
 }
 
@@ -1136,6 +1148,7 @@ a.page-numbers {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  padding-top: 20px; /* 必要に応じて調整 */
 }
 
 .grid-container {
@@ -1164,7 +1177,7 @@ a.page-numbers {
 }
 
 .black-bar::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   width: 32px;
@@ -1220,9 +1233,21 @@ a.to-lyrics {
 .play-icon-movies {
   position: absolute;
   top: 50%;
-  left: 56%;
+  left: 50%;
   transform: translate(-50%, -50%);
   width: 12%;
+}
+
+.play-icon-movies.movies19 {
+  top: 55%;
+}
+
+.play-icon-movies.movies21 {
+  top: 41%;
+}
+
+.thumbnail-container svg.play-icon-movies {
+  margin: 0;
 }
 
 img.play-icon-movies.icon-14 {
@@ -1367,22 +1392,22 @@ a.to-movie svg {
 
 .lyrics-page-title-zabuton {
   position: absolute;
-  top: 50%;
+  top: -11%;
   left: 24%;
   width: 100%; /* ザブトンの幅を自由に調整 */
   height: 30px;
   background-color: rgba(0, 0, 0); /* 背景色を調整 */
-  transform: translateY(-50%);
+  transform: translateX(-100%);
   z-index: 0; /* テキストの背後に配置 */
 }
 
 .lyrics-page-title-zabuton-right {
   position: absolute;
-  top: 50%;
+  top: -15%;
   width: 100%;
   height: 30px;
   background-color: rgba(0, 0, 0);
-  transform: translateY(-50%);
+  transform: translateX(100%);
   z-index: 0;
   right: 29%;
 }
@@ -1455,6 +1480,7 @@ a.to-movie svg {
   left: -35%;
   width: 144%;
   height: 44px;
+  top: 1%;
 }
 
 /********** lyricsページ　アコーディオン **********/
