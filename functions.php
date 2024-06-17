@@ -5,6 +5,7 @@ function load_custom_styles_and_scripts()
 {
     // 既存のCSSファイルの読み込み
     wp_enqueue_style('layout-style', get_template_directory_uri() . '/css/layout.css');
+    wp_enqueue_style('pc-layout-style', get_template_directory_uri() . '/css/pc-layout.css');
     wp_enqueue_style('btn-style', get_template_directory_uri() . '/css/btn.css');
     // JavaScriptファイルの読み込み
     wp_enqueue_script('script-js', get_template_directory_uri() . '/js/script.js', array('jquery'), null, true);

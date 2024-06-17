@@ -31,6 +31,7 @@ get_header(); // ヘッダーの読み込み
                             <option value="ticket">チケット予約</option>
                             <option value="inquiry">その他お問い合わせ</option>
                         </select>
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/polygon-4.svg" id="dropdown-icon" style="position: absolute; right: 35px; top: 70%; transform: translateY(-50%); cursor: pointer;" />
                     </div>
                 </div>
 
@@ -51,6 +52,7 @@ get_header(); // ヘッダーの読み込み
                         <input class="input-area" type="email" id="email" name="email" required>
                     </div>
                 </div>
+            </form>
         </div>
 
         <div class="input-grid-container">
@@ -67,7 +69,14 @@ get_header(); // ヘッダーの読み込み
             </div>
         </div>
 
+        <div id="image-paths" data-polygon4-url="<?php echo esc_url(get_template_directory_uri()); ?>/images/polygon-4.svg" data-polygon3-url="<?php echo esc_url(get_template_directory_uri()); ?>/images/polygon-3.svg"></div>
+
         <script>
+            document.getElementById('dropdown-icon').addEventListener('click', function() {
+                document.getElementById('category').click(); // クリックイベントをトリガーしてデフォルトのプルダウンを表示
+            });
+
+
             document.getElementById('goToConfirmation').addEventListener('click', function() {
                 var formElement = document.getElementById('contactForm');
 
@@ -86,6 +95,7 @@ get_header(); // ヘッダーの読み込み
                 window.location.href = '<?php echo home_url(); ?>/confirmation/';
             });
         </script>
+
     </section>
 </div>
 
