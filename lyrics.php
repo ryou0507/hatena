@@ -1353,7 +1353,7 @@ get_header(); // ヘッダーの読み込み
                         </svg></a>
                 </div>
                 <div class="ctc-container custom">
-                    <a href="#" class="contact-btn">お問い合わせ</a>
+                    <a href="<?php echo home_url('/inquiry'); ?>" class="contact-btn">お問い合わせ</a>
                 </div>
             </div>
         </div>

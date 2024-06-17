@@ -11,7 +11,7 @@ get_header(); // ヘッダーの読み込み
     <section class="movies-firstview-section">
         <div class="movies-firstview-container">
             <div class="vertical-bar"></div>
-            <p class="movies-subtitle">schedule</p>
+            <p class="movies-subtitle schedule">schedule</p>
             <div class="horizontal-bar">
                 <h1 class="movies-title">スケジュール</h1>
             </div>
@@ -26,6 +26,11 @@ get_header(); // ヘッダーの読み込み
                 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                 echo do_shortcode('[schedule_list posts_per_page="10" show_pagination="true"]'); // スケジュールページでは10件を表示
                 ?>
+
+                <div class="ctc-container schedule">
+                    <a href="<?php echo home_url('/inquiry'); ?>" class="contact-btn">お問い合わせ</a>
+                </div>
+
             </div>
         </div>
     </section>

@@ -89,7 +89,7 @@ function getCurrentUrl()
                         </div>
                     </div>
                     <div class="contact-button">
-                        <a href="">お問い合わせ</a>
+                        <a href="<?php echo home_url('/inquiry'); ?>">お問い合わせ</a>
                     </div>
 
                     <div class="submenu-overlay" id="movies-submenu">
@@ -136,7 +136,7 @@ function getCurrentUrl()
                             </div>
                         </div>
                         <div class="contact-button">
-                            <a href="">お問い合わせ</a>
+                            <a href="<?php echo home_url('/inquiry'); ?>">お問い合わせ</a>
                         </div>
                     </div>
                     <div class="submenu-overlay" id="next-movies-submenu">
@@ -182,7 +182,7 @@ function getCurrentUrl()
                             </div>
                         </div>
                         <div class="contact-button">
-                            <a href="">お問い合わせ</a>
+                            <a href="<?php echo home_url('/inquiry'); ?>">お問い合わせ</a>
                         </div>
                     </div>
 
@@ -228,7 +228,7 @@ function getCurrentUrl()
                             </div>
                         </div>
                         <div class="contact-button">
-                            <a href="">お問い合わせ</a>
+                            <a href="<?php echo home_url('/inquiry'); ?>">お問い合わせ</a>
                         </div>
                     </div>
 
@@ -275,7 +275,7 @@ function getCurrentUrl()
                             </div>
                         </div>
                         <div class="contact-button">
-                            <a href="">お問い合わせ</a>
+                            <a href="<?php echo home_url('/inquiry'); ?>">お問い合わせ</a>
                         </div>
                     </div>
 
@@ -321,7 +321,7 @@ function getCurrentUrl()
                             </div>
                         </div>
                         <div class="contact-button">
-                            <a href="">お問い合わせ</a>
+                            <a href="<?php echo home_url('/inquiry'); ?>">お問い合わせ</a>
                         </div>
                     </div>
 
@@ -366,7 +366,7 @@ function getCurrentUrl()
                             </div>
                         </div>
                         <div class="contact-button">
-                            <a href="">お問い合わせ</a>
+                            <a href="<?php echo home_url('/inquiry'); ?>">お問い合わせ</a>
                         </div>
                     </div>
 

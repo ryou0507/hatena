@@ -201,7 +201,7 @@
         <a href="https://nplusy.booth.pm/" class="custom-btn">view more</a>
     </div>
     <div class="ctc-container">
-        <a href="#" class="contact-btn">お問い合わせ</a>
+        <a href="<?php echo home_url('/inquiry'); ?>" class="contact-btn">お問い合わせ</a>
     </div>
 </section>
 

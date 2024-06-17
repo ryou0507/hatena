@@ -701,6 +701,14 @@ p.no-schedule {
   justify-content: center;
   align-items: center;
 }
+
+.movies-subtitle.schedule {
+  padding-right: 54px;
+}
+
+.schedule-list-section p.no-schedule {
+  padding-left: 36px;
+}
 /********** 動画　レイアウト **********/
 .movie-container {
   position: relative;
@@ -779,7 +787,7 @@ p.no-schedule {
   overflow: auto;
   background-color: rgba(255, 255, 255, 0.8);
   opacity: 0;
-  transition: opacity 1s ease-in-out; /* トランジションの速度を1秒に設定 */
+  transition: opacity 0.3s ease-in-out; /* トランジションの速度を1秒に設定 */
 }
 
 .modal.show {
@@ -1272,42 +1280,6 @@ img.play-icon-movies.icon-12 {
     opacity: 1;
     transform: translateX(0);
   }
-}
-
-#movies-01::before,
-#movies-02::before,
-#movies-03::before,
-#movies-04::before,
-#movies-05::before,
-#movies-06::before,
-#movies-07::before,
-#movies-08::before,
-#movies-09::before,
-#movies-10::before,
-#movies-11::before,
-#movies-12::before,
-#movies-13::before,
-#movies-14::before,
-#movies-15::before,
-#movies-16::before,
-#movies-17::before,
-#movies-18::before,
-#movies-19::before,
-#movies-20::before,
-#movies-21::before {
-  content: "";
-  display: block;
-  height: 800px; /* 必要に応じて調整 */
-  margin-top: -800px; /* 必要に応じて調整 */
-  visibility: hidden;
-}
-
-.scroll-offset {
-  display: block;
-  content: "";
-  height: 80px; /* 適切なオフセットの高さを指定 */
-  margin-top: -80px; /* 同じ高さの負のマージンを指定 */
-  visibility: hidden; /* スペーサーを見えなくする */
 }
 
 /********** lyricsページ　レイアウト **********/

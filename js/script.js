@@ -159,11 +159,20 @@ document.addEventListener("DOMContentLoaded", function () {
     var svgIcon = thumbnail.nextElementSibling; // SVGアイコンを取得
     var span = modal.getElementsByClassName("close")[0];
     var video = document.getElementById(videoId);
+    var scrollPosition = 0;
 
     function openModal(event) {
+      event.preventDefault(); // デフォルトの動作を防ぐ
+      event.stopPropagation(); // クリックイベントの伝播を停止
+      scrollPosition = window.scrollY;
       modal.style.display = "block";
-      modal.classList.add("show");
+      setTimeout(function () {
+        modal.classList.add("show");
+      }, 10); // トランジションのための遅延を追加
       document.body.style.overflow = "hidden";
+      document.body.style.position = "fixed";
+      document.body.style.width = "100%";
+      document.body.style.top = `-${scrollPosition}px`;
     }
 
     function closeModal() {
@@ -171,6 +180,17 @@ document.addEventListener("DOMContentLoaded", function () {
       setTimeout(function () {
         modal.style.display = "none";
         document.body.style.overflow = "auto";
+        document.body.style.position = "";
+        document.body.style.width = "";
+        document.body.style.top = "";
+
+        // スムーススクロールを無効化
+        document.documentElement.style.scrollBehavior = "auto";
+        window.scrollTo(0, scrollPosition); // 元のスクロール位置に戻る
+        // スムーススクロールを再度有効化
+        setTimeout(function () {
+          document.documentElement.style.scrollBehavior = "";
+        }, 10); // 少しの遅延を追加してスムーススクロールを再度有効化
       }, 300); // トランジション時間を考慮
       video.contentWindow.postMessage(
         '{"event":"command","func":"pauseVideo","args":""}',
