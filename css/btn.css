@@ -600,6 +600,51 @@ p.submenu-top-jap {
   margin-left: 18%;
 }
 
+/********** PC view moreボタン **********/
+a.custom-btn.pc-btn {
+  font-size: clamp(0.75rem, 0.036rem + 1.49vw, 1.375rem);
+  width: clamp(9rem, 6.714rem + 4.76vw, 11rem);
+  height: clamp(1.5rem, 0.929rem + 1.19vw, 2rem);
+  transform: translateX(clamp(21rem, -4.143rem + 52.38vw, 43rem)) translateY(clamp(3rem, -0.429rem + 7.14vw, 6rem));
+}
+
+
+/********** PC movies view moreボタン **********/
+.btn-container.pc-movies-btn {
+  display: flex;
+  margin-top: clamp(-1rem, -10.143rem + 19.05vw, 7rem);
+  margin-left: clamp(3.5rem, -5.643rem + 19.05vw, 11.5rem);
+}
+
+a.custom-btn.pc-movie-btn {
+  font-size: clamp(0.75rem, 0.036rem + 1.49vw, 1.375rem);
+  width: clamp(9rem, 6.714rem + 4.76vw, 11rem);
+  height: clamp(1.5rem, 0.929rem + 1.19vw, 2rem);
+}
+
+/********** PC lyrics view moreボタン **********/
+.btn-container.lyrics {
+  margin-top: clamp(5.5rem, -5.7rem + 23.33vw, 15.3rem);
+  margin-left: -5rem;
+}
+
+a.custom-btn.pc-lyrics-btn {
+  font-size: clamp(0.75rem, 0.036rem + 1.49vw, 1.375rem);
+  width: clamp(9rem, 6.714rem + 4.76vw, 11rem);
+  height: clamp(1.5rem, 0.929rem + 1.19vw, 2rem);
+}
+
+/********** PC お問い合わせボタン **********/
+.contact-btn.pc-btn {
+  font-size: clamp(0.75rem, 0.036rem + 1.49vw, 1.375rem);
+  width: clamp(10rem, 4.286rem + 11.9vw, 15rem);
+  height: clamp(1.5rem, 0.929rem + 1.19vw, 2rem);
+}
+
+.ctc-container.pc-btn {
+  margin-left: -5rem;
+}
+
 /********** 768px以上のメディアクエリ **********/
 @media screen and (max-width: 767px) {
   #pc-header {

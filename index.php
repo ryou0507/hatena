@@ -213,6 +213,8 @@
 
 <!-- PC トップページ -->
 <div class="pc-index-all-container">
+    <?php get_header(); // ヘッダーの読み込み 
+    ?>
 
     <section class="pc-firstview-section">
         <div class="pc-firstview-container">
@@ -260,14 +262,218 @@
         </div>
     </section>
 
-    <section class="pc-profile-section"></section>
+    <section class="pc-profile-section">
+        <div class="pc-profile-container">
+            <div class="profile-1st-container">
+                <div class="top-horizontal-bar-left"></div>
+                <div class="bottom-horizontal-bar-left"></div>
+                <div class="pc-vertical-bar-left"></div>
+            </div>
+            <div class="profile-2nd-container">
+                <div class="top-horizontal-bar"></div>
+                <div class="bottom-horizontal-bar"></div>
+                <div class="pc-vertical-bar">
+                    <p>何も捨ててしまわなくていいよおもいなら僕が預かるから</p>
+                </div>
+            </div>
+            <div class="profile-3rd-container">
+                <div class="top-horizontal-bar-center"></div>
+                <div class="bottom-horizontal-bar-center"></div>
+                <div class="top-subtitle-horizontal-bar">
+                    <p>profile</p>
+                </div>
+                <div class="bottom-title-horizontal-bar">
+                    <p>プロフィール</p>
+                </div>
+                <div class="profile-main-content">
+                    <div class="pc-profile-image-container">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/profile.png" alt="" class="pc-profile-img">
+                    </div>
+                    <div class="pc-profile-border"></div>
+                    <div class="pc-profile-text-container">
+                        <p class="name">隠世はてな</p>
+                        <p class="details">匿名と陰鬱をコンセプトとして、2020年7月に活動を開始。<br>2022年には初のワンマンライブでチケットをソールドアウト。<br>現在は弾き語りライブ、クラブイベントなど、ソロアーティストとしてステージに立っている。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-4th-container">
+                <div class="top-horizontal-bar-right"></div>
+                <div class="bottom-horizontal-bar-right"></div>
+                <div class="pc-vertical-bar-right"></div>
+            </div>
+        </div>
+    </section>
 
-    <section class="pc-schedule-section"></section>
+    <section class="pc-schedule-section">
+        <div class="pc-schedule-container">
+            <div class="schedule-1st-container">
+                <div class="top-horizontal-bar-left"></div>
+                <div class="bottom-horizontal-bar-left"></div>
+                <div class="pc-vertical-bar-left schedule">
+                    <p>夢を人質に奪われた世界を取り戻せるかな</p>
+                </div>
+            </div>
+            <div class="schedule-2nd-container">
+                <div class="top-horizontal-bar"></div>
+                <div class="bottom-horizontal-bar"></div>
+                <div class="pc-vertical-bar schedule"></div>
+            </div>
+            <div class="schedule-3rd-container">
+                <div class="top-horizontal-bar-center schedule">
+                    <p>schedule</p>
+                </div>
+                <div class="bottom-horizontal-bar-center schedule">
+                    <p>スケジュール</p>
+                </div>
+                <div class="schedule-main-content">
+                    <?php echo do_shortcode('[schedule_list posts_per_page="2" show_pagination="false"]'); // トップページでは2件を表示 
+                    ?>
+                    <a href="<?php echo home_url(); ?>/schedule/" class="custom-btn pc-btn">view more</a>
+                </div>
+            </div>
+            <div class="schedule-4th-container">
+                <div class="pc-vertical-bar-right">
+                    <p>どんな一日も生き抜いただけで満点◎</p>
+                </div>
+            </div>
+        </div>
 
-    <section class="pc-movie-section"></section>
+    </section>
 
-    <section class="lyrics-section"></section>
 
+    <section class="pc-movie-and-lyrics-section">
+        <div class="pc-movies-and-lyrics-container">
+            <div class="movies-1st-container">
+                <div class="top-horizontal-bar-left"></div>
+                <div class="bottom-horizontal-bar-left"></div>
+                <div class="pc-vertical-bar-left-inner">
+                    <p>宝箱の中身なんて知りたくなかった</p>
+                </div>
+                <div class="pc-vertical-bar-left movies"></div>
+            </div>
+            <div class="movies-2nd-container">
+                <div class="top-horizontal-bar"></div>
+                <div class="bottom-horizontal-bar"></div>
+                <div class="pc-vertical-bar schedule movies"></div>
+            </div>
+            <div class="movies-3rd-container">
+                <div class="top-horizontal-bar movies">
+                    <p>movies</p>
+                </div>
+                <div class="bottom-horizontal-bar movies">
+                    <p>動画</p>
+                </div>
+                <div class="movies-and-lyrics-main-content">
+                    <div class="movie-thumbnail-content pc-movies">
+                        <div class="movie-thumbnail-container scroll-up pc-movies">
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/movie-1.png" alt="" class="movie-thumbnail pc-movies" id="thumbnail-1">
+                            <svg class="play-icon-movies top pc-movies" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+                                <circle cx="25" cy="25" r="25" fill="black" fill-opacity="0.5" />
+                                <path d="M33.5 24.134C34.1667 24.5189 34.1667 25.4811 33.5 25.866L21.5 32.7942C20.8333 33.1791 20 32.698 20 31.9282V18.0718C20 17.302 20.8333 16.8209 21.5 17.2058L33.5 24.134Z" fill="white" />
+                            </svg>
+                        </div>
+                        <div id="videoModal-1" class="modal">
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <iframe id="video-1" width="320" height="180" src="https://www.youtube.com/embed/gsvgu-dlJz8?si=ljobtv4u_9zYa24-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                        </div>
+
+                        <div class="movie-thumbnail-container scroll-up pc-movies">
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/movie-2.png" alt="" class="movie-thumbnail pc-movies" id="thumbnail-2">
+                            <svg class="play-icon-movies top pc-movies" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+                                <circle cx="25" cy="25" r="25" fill="black" fill-opacity="0.5" />
+                                <path d="M33.5 24.134C34.1667 24.5189 34.1667 25.4811 33.5 25.866L21.5 32.7942C20.8333 33.1791 20 32.698 20 31.9282V18.0718C20 17.302 20.8333 16.8209 21.5 17.2058L33.5 24.134Z" fill="white" />
+                            </svg>
+                        </div>
+                        <div id="videoModal-2" class="modal">
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <iframe id="video-2" width="320" height="180" src="https://www.youtube.com/embed/hq_3UqFaXFE?si=N06ZSHoDfHZKVfZm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="movie-thumbnail-container scroll-up pc-movies">
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/movie-3.png" alt="" class="movie-thumbnail pc-movies" id="thumbnail-3">
+                            <svg class="play-icon-movies top pc-movies" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+                                <circle cx="25" cy="25" r="25" fill="black" fill-opacity="0.5" />
+                                <path d="M33.5 24.134C34.1667 24.5189 34.1667 25.4811 33.5 25.866L21.5 32.7942C20.8333 33.1791 20 32.698 20 31.9282V18.0718C20 17.302 20.8333 16.8209 21.5 17.2058L33.5 24.134Z" fill="white" />
+                            </svg>
+                        </div>
+                        <div id="videoModal-3" class="modal">
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <iframe id="video-3" width="320" height="180" src="https://www.youtube.com/embed/beRsnPv4yNc?si=isNNiUfhxYcZoS6i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="btn-container pc-movies-btn">
+                            <a href="<?php echo home_url(); ?>/movies/" class="custom-btn pc-movie-btn">view more</a>
+                        </div>
+                    </div>
+
+                    <div class="pc-lyrics-container">
+                        <div class="top-subtitle-horizontal-bar lyrics">
+                            <p>lyrics</p>
+                        </div>
+                        <div class="bottom-title-horizontal-bar lyrics">
+                            <p>リリック</p>
+                        </div>
+                        <div class="bottom-title-horizontal-bar lyrics-01">
+                            <p>01 拗け</p>
+                        </div>
+                        <div class="pc-lyrics-text-container lyrics-text-01">
+                            <p>理非も真偽もわからずに　絆され翻弄され続けて
+                                誰かを信じることが怖くて　一人を選んだの</p>
+                            <p>そっと呟く単純な四文字
+                                ずっとずっと言って未だ
+                                成功はしてないけど</p>
+                            <p>冗談ぽく言った本当の言葉を君は拾ってくれるから</p>
+                            <a href="<?php echo home_url('/lyrics/#lyrics-01'); ?>" class="more-link pc-link">more ></a>
+                        </div>
+                        <div class="bottom-title-horizontal-bar lyrics-02">
+                            <p>02 卒業</p>
+                        </div>
+                        <div class="pc-lyrics-text-container lyrics-text-02">
+                            <p>友達とふざけ合った休み時間
+                                寄り道した帰り道
+                                恋話した自習もふざけ合った体育も
+                                全部今だけだから</p>
+                            教科書に載ってない　たくさんの知識<br>
+                            <p>わかんない授業のお話なんて　今度聞きに行けばいいから</p>
+                            <a href="<?php echo home_url('/lyrics/#lyrics-02'); ?>" class="more-link pc-link">more ></a>
+                        </div>
+                        <div class="bottom-title-horizontal-bar lyrics-03">
+                            <p>03 読書</p>
+                        </div>
+                        <div class="pc-lyrics-text-container lyrics-text-03">
+                            <p>失った時間、引き換えに得たものは
+                                あまり多くはありませんでした。
+                                失った視力、引き換えに得たものは
+                                自分を卑下する語彙ばかり。</p>
+                            <p>取り繕った言葉のほつれ
+                                気づいても直す術を知らず
+                                汚い部分が露呈してゆく</p>
+                            <a href="<?php echo home_url('/lyrics/#lyrics-03'); ?>" class="more-link pc-link">more ></a>
+                        </div>
+                        <div class="btn-container lyrics">
+                            <a href="<?php echo home_url(); ?>/lyrics/" class="custom-btn pc-lyrics-btn">view more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ctc-container pc-btn">
+                    <a href="<?php echo home_url('/inquiry'); ?>" class="contact-btn pc-btn">お問い合わせ</a>
+                </div>
+
+            </div>
+            <div class="movies-4th-container">
+                <div class="top-horizontal-bar-right movies"></div>
+                <div class="bottom-horizontal-bar-right movies"></div>
+                <div class="pc-vertical-bar-right movies">
+                    <p>明日は僕が電車をとめてしまうかも</p>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
 
 <?php get_footer(); ?>

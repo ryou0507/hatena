@@ -27,7 +27,6 @@
 
 /********** PCファーストビュー　レイアウト **********/
 .pc-firstview-container {
-  position: relative;
   display: grid;
   grid-template-columns: 3fr 7fr;
 }
@@ -78,11 +77,11 @@
   font-weight: 400;
   line-height: normal;
   width: clamp(1.2rem, 0.293rem + 1.9vw, 2rem);
+  height: 100%;
   padding-top: clamp(19rem, -5.253rem + 50.73vw, 40.4rem);
   padding-bottom: 2%;
   background: var(--base_1_500e70, #500e70);
   letter-spacing: 9px;
-  height: 100%;
 }
 
 .firstview-right-container {
@@ -151,3 +150,598 @@
   line-height: normal;
   text-decoration: none;
 }
+
+/********** PC profile レイアウト **********/
+.pc-profile-container {
+  display: grid;
+  grid-template-columns: 10fr 3fr 56fr 4fr;
+  width: 100%;
+  height: clamp(32.063rem, 10.134rem + 45.68vw, 51.25rem);
+}
+
+.profile-1st-container {
+  height: 100%;
+}
+
+.top-horizontal-bar-left {
+  background-color: rgba(0, 0, 0);
+  width: 100%;
+  height: clamp(1.2rem, 0.293rem + 1.9vw, 2rem);
+  transform: translateY(clamp(2rem, -2.533rem + 9.48vw, 6rem));
+}
+
+.bottom-horizontal-bar-left {
+  background-color: rgba(0, 0, 0);
+  width: 100%;
+  height: clamp(1.2rem, 0.293rem + 1.9vw, 2rem);
+  transform: translateY(clamp(3rem, -2.667rem + 11.85vw, 8rem));
+}
+
+.pc-vertical-bar-left {
+  background: linear-gradient(to top, rgba(0, 0, 0, 1) 65%, rgba(0, 0, 0, 0) 114%);
+  width: clamp(1.2rem, 0.293rem + 1.9vw, 2rem);
+  height: 85%;
+  margin-left: clamp(3.3rem, -2.593rem + 12.33vw, 8.5rem);
+  transform: translateY(clamp(2.6rem, -3.114rem + 11.9vw, 7.6rem));
+}
+
+.profile-2nd-container {
+  height: 100%;
+}
+
+.top-horizontal-bar {
+  background-color: rgba(0, 0, 0);
+  height: clamp(1.2rem, 0.293rem + 1.9vw, 2rem);
+  transform: translateY(clamp(2rem, -2.533rem + 9.48vw, 6rem));
+}
+
+.bottom-horizontal-bar {
+  background-color: rgba(0, 0, 0);
+  height: clamp(1.2rem, 0.293rem + 1.9vw, 2rem);
+  transform: translateY(clamp(3rem, -2.667rem + 11.85vw, 8rem));
+}
+
+.pc-vertical-bar {
+  background: linear-gradient(to top, rgba(0, 0, 0, 1) 74%, rgba(0, 0, 0, 0) 98%);
+  width: clamp(1.2rem, 0.293rem + 1.9vw, 2rem);
+  height: 107%;
+  margin-left: clamp(-0.6rem, -2.413rem + 3.79vw, 1rem);
+  transform: translateY(-4.4rem);
+}
+
+.pc-vertical-bar p {
+  color: var(--accent_1_2, #E07BB5);
+  font-size: clamp(0.5rem, 0.043rem + 0.95vw, 0.9rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  writing-mode: vertical-rl;
+  transform: translateX(clamp(0.2rem, 0.051rem + 0.31vw, 0.33rem)) translateY(clamp(5rem, 0.429rem + 9.52vw, 9rem));
+  letter-spacing: 3px;
+}
+
+.top-horizontal-bar-center {
+  background: linear-gradient(to right, black 60%, rgba(0, 0, 0, 0));  
+  width: 63%;
+  height: clamp(1.2rem, 0.293rem + 1.9vw, 2rem);
+  transform: translateY(clamp(2rem, -2.533rem + 9.48vw, 6rem));
+}
+
+.bottom-horizontal-bar-center {
+  background: linear-gradient(to right, black 60%, rgba(0, 0, 0, 0));  
+  width: 55%;
+  height: clamp(1.2rem, 0.293rem + 1.9vw, 2rem);
+  transform: translateY(clamp(3rem, -2.667rem + 11.85vw, 8rem));
+}
+
+.top-subtitle-horizontal-bar {
+  background: linear-gradient(to left, black, rgba(0, 0, 0, 0) 105%);  
+  width: 54%;
+  height: clamp(1.2rem, 0.293rem + 1.9vw, 2rem);
+  transform: translateX(clamp(16.6rem, 1.413rem + 31.76vw, 30rem)) translateY(clamp(5rem, -3.387rem + 17.54vw, 12.4rem));
+}
+
+.top-subtitle-horizontal-bar p {
+  color: var(--accent_1_2, #E07BB5);
+  font-size: clamp(0.688rem, 0.188rem + 1.04vw, 1.125rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 4.8px;
+  transform: translateX(1rem);
+}
+
+.bottom-title-horizontal-bar {
+  background: linear-gradient(to left, black 60%, rgba(0, 0, 0, 0) 104%);  
+  width: 74%;
+  height: clamp(1.2rem, 0.293rem + 1.9vw, 2rem);
+  transform: translateX(clamp(9.2rem, 0.36rem + 18.49vw, 17rem)) translateY(clamp(6rem, -3.52rem + 19.91vw, 14.4rem));
+}
+
+.bottom-title-horizontal-bar p {
+  color: var(--accent_1_2, #E07BB5);
+  font-size: clamp(0.813rem, 0.241rem + 1.19vw, 1.313rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 7.2px;
+  letter-spacing: 7.2px;
+  transform: translateX(clamp(4rem, -0.571rem + 9.52vw, 8rem));
+}
+
+.top-horizontal-bar-right {
+  background-color: rgba(0, 0, 0);
+  width: 100%;
+  height: clamp(1.2rem, 0.293rem + 1.9vw, 2rem);
+  transform: translateY(clamp(7.4rem, -2.8rem + 21.33vw, 16.4rem));
+}
+
+.bottom-horizontal-bar-right {
+  background-color: rgba(0, 0, 0);
+  width: 100%;
+  height: clamp(1.2rem, 0.293rem + 1.9vw, 2rem);
+  transform: translateY(clamp(8.4rem, -2.933rem + 23.7vw, 18.4rem));
+}
+
+.pc-vertical-bar-right {
+  background-color: rgba(0, 0, 0);
+  width: clamp(1.2rem, 0.293rem + 1.9vw, 2rem);
+  height: 114%;
+  margin-right: clamp(3.3rem, -2.593rem + 12.33vw, 8.5rem);
+  transform: translateY(-4.4rem);
+}
+
+.pc-vertical-bar-right p {
+  color: var(--accent_1_2, #E07BB5);
+  font-size: clamp(0.5rem, 0.043rem + 0.95vw, 0.9rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  writing-mode: vertical-rl;
+  transform: translateX(clamp(0.2rem, 0.051rem + 0.31vw, 0.33rem)) translateY(5rem);
+  letter-spacing: 3px;
+}
+
+.profile-main-content {
+  display: flex;
+  align-items: center; /* コンテンツを縦に中央揃え */
+  justify-content: space-between; /* コンテンツの間にスペースを配置 */
+  gap: 20px; /* コンテナ間のスペースを調整 */
+  margin-top: clamp(10rem, -1.429rem + 23.81vw, 20rem);
+}
+
+.pc-profile-image-container {
+  flex: 0 0 40%; /* 画像コンテナの幅を40%に設定 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pc-profile-border {
+  width: 2px;
+  height: clamp(9.5rem, 1.5rem + 16.67vw, 16.5rem);
+  background-color: white;
+}
+
+.pc-profile-text-container {
+  flex: 1; /* テキストコンテナが残りのスペースを埋める */
+  padding: 0 clamp(1.5rem, -1.357rem + 5.95vw, 4rem);
+}
+
+.pc-profile-img {
+  width: 65%; /* 画像がコンテナに合わせてリサイズ */
+  height: auto; /* 画像のアスペクト比を保持 */
+}
+
+.name {
+  color: #FFF;
+  text-align: justify;
+  font-size: clamp(1rem, 0.429rem + 1.19vw, 1.5rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 2.7px;
+  margin-bottom: clamp(1rem, 0.429rem + 1.19vw, 1.5rem);
+}
+
+.details {
+  color: #FFF;
+  text-align: justify;
+  font-size: clamp(0.6rem, 0.143rem + 0.95vw, 1rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: clamp(1.063rem, -0.08rem + 2.38vw, 2.063rem); 
+  letter-spacing: 2.25px;
+}
+
+/********** schedule　レイアウト **********/
+.pc-schedule-container {
+  display: grid;
+  grid-template-columns: 10fr 3fr 56fr 4fr;
+  width: 100%;
+  height: clamp(32.063rem, 2.421rem + 61.75vw, 58rem);
+}
+
+.pc-vertical-bar-left.schedule {
+  background: rgba(0, 0, 0);
+  transform: translateY(-4rem);
+  height: 106%;
+}
+
+.pc-vertical-bar-left.schedule p {
+  color: var(--accent_1_2, #E07BB5);
+  font-size: clamp(0.5rem, 0.043rem + 0.95vw, 0.9rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  writing-mode: vertical-rl;
+  transform: translateX(clamp(0.2rem, 0.051rem + 0.31vw, 0.33rem)) translateY(clamp(15rem, -2.143rem + 35.71vw, 30rem));
+  letter-spacing: 3px;
+}
+
+.pc-vertical-bar.schedule {
+  background: rgba(0, 0, 0);
+  height: 105%;
+  transform: translateY(-4rem);
+}
+
+.top-horizontal-bar-center.schedule p {
+  color: var(--accent_1_2, #E07BB5);
+  font-size: clamp(0.688rem, 0.188rem + 1.04vw, 1.125rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 4.8px;
+  transform: translateX(clamp(15rem, 3.571rem + 23.81vw, 25rem));
+}
+
+.bottom-horizontal-bar-center.schedule {
+  width: 80%;
+}
+
+.bottom-horizontal-bar-center.schedule p {
+  color: var(--accent_1_2, #E07BB5);
+  font-size: clamp(0.813rem, 0.241rem + 1.19vw, 1.313rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 7.2px;
+  transform: translateX(clamp(14.7rem, 2.929rem + 24.52vw, 25rem));
+}
+
+.schedule-content.excerpt-content,
+.schedule-remaining-content.excerpt-content,
+.schedule-btn.excerpt-content {
+  display: block;
+}
+
+.btn-container.schedule {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 6rem;
+}
+
+@media (min-width: 768px) {
+
+.schedule-content.excerpt-content,
+.schedule-remaining-content.excerpt-content,
+.schedule-btn.excerpt-content {
+    display: none;
+}
+  .schedule-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(0rem, -3.429rem + 7.14vw, 3rem);
+    margin-top: clamp(4rem, -2.857rem + 14.29vw, 10rem);
+    margin-right: clamp(1rem, -1.286rem + 4.76vw, 3rem);
+    margin-bottom: clamp(-3rem, 1.571rem + -9.52vw, -7rem);
+  }
+
+  .schedule-thumbnail {
+    position: relative;
+    flex: 0 40%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+
+  .schedule-thumbnail img {
+    width: clamp(6rem, 2.571rem + 7.14vw, 9rem);
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
+
+  .pc-schedule-text-container {
+    flex: 1;
+  }
+
+  .schedule-date {
+    font-size: clamp(0.5rem, 1.04vw, 0.938rem);
+  }
+
+  .schedule-title a {
+    font-size: clamp(0.625rem, 0.339rem + 0.6vw, 0.875rem);
+  }
+
+  .schedule-content {
+    font-size: clamp(0.625rem, 0.196rem + 0.89vw, 1rem);
+    width: clamp(22.563rem, 7.277rem + 31.85vw, 35.938rem);
+  } 
+
+  .schedule-btn {
+    display: none;
+  }
+
+  .google-map-link {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+}
+
+/********** movies レイアウト **********/
+.movies-and-lyrics-container {
+  display: flex;
+  height: 1500px;
+}
+
+.pc-movies-and-lyrics-container {
+  display: grid;
+  grid-template-columns: 10fr 3fr 56fr 4fr;
+  width: 100%;
+  height: clamp(53.75rem, 8.036rem + 95.24vw, 93.75rem);
+}
+
+.movies-and-lyrics-main-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 1:1 の比率で2列を作成 */
+  gap: 20px; /* 必要に応じてカラム間のギャップを調整 */
+}
+
+.pc-vertical-bar-left-inner {
+  background: linear-gradient(to top, rgba(0, 0, 0, 1) 65%, rgba(0, 0, 0, 0) 114%);
+  width: clamp(1.2rem, 0.293rem + 1.9vw, 2rem);
+  height: 62%;
+  margin-left: clamp(1.2rem, -2rem + 6.67vw, 4rem);
+  transform: translateY(clamp(18rem, 2rem + 33.33vw, 32rem));
+}
+
+.pc-vertical-bar-left-inner p {
+  color: var(--accent_1_2, #E07BB5);
+  font-size: clamp(0.5rem, 0.043rem + 0.95vw, 0.9rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  writing-mode: vertical-rl;
+  transform: translateX(clamp(0.2rem, 0.051rem + 0.31vw, 0.33rem)) translateY(clamp(6rem, -4.286rem + 21.43vw, 15rem));
+  letter-spacing: 3px;
+}
+
+.pc-vertical-bar-left.movies {
+  background: rgba(0, 0, 0);
+  transform: translateY(-79rem);
+  height: clamp(76rem, 53.143rem + 47.62vw, 96rem);
+}
+
+.pc-vertical-bar.schedule.movies {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 73%, rgba(0, 0, 0, 0) 113%);
+  height: clamp(31rem, 4.714rem + 54.76vw, 54rem);
+}
+
+.top-horizontal-bar.movies {
+  background: linear-gradient(to right, black, rgba(0, 0, 0, 0) 105%);  
+  width: clamp(17rem, -2.429rem + 40.48vw, 34rem);
+}
+
+.top-horizontal-bar.movies p {
+  color: var(--accent_1_2, #E07BB5);
+  font-size: clamp(0.688rem, 0.188rem + 1.04vw, 1.125rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 4.8px;
+  transform: translateX(clamp(7rem, -3.286rem + 21.43vw, 16rem));
+}
+
+.bottom-horizontal-bar.movies {
+  background: linear-gradient(to right, black, rgba(0, 0, 0, 0) 100%);  
+  width: clamp(14rem, -4.286rem + 38.1vw, 30rem);
+}
+
+.bottom-horizontal-bar.movies p {
+  color: var(--accent_1_2, #E07BB5);
+  font-size: clamp(0.813rem, 0.241rem + 1.19vw, 1.313rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 7.2px;
+  transform: translateX(clamp(7rem, -3.286rem + 21.43vw, 16rem));
+}
+
+.movie-thumbnail-content.pc-movies {
+  margin-top: clamp(7rem, -3.286rem + 21.43vw, 16rem);
+}
+
+.movie-thumbnail-container.scroll-up.pc-movies.scroll-up-active {
+  margin-bottom: clamp(4.063rem, 0.134rem + 8.18vw, 7.5rem);
+  margin-left: clamp(1.25rem, -4.25rem + 11.46vw, 6.063rem);
+}
+
+.movie-thumbnail.pc-movies {
+  width: clamp(14rem, 6rem + 16.67vw, 21rem);
+}
+
+.play-icon-movies.top.pc-movies {
+  left: clamp(8.3rem, 3.5rem + 10vw, 12.5rem);
+}
+
+.top-horizontal-bar-right.movies {
+  transform: translateY(clamp(4.4rem, -3.143rem + 15.71vw, 11rem));
+}
+
+.bottom-horizontal-bar-right.movies {
+  transform: translateY(clamp(5.4rem, -2.943rem + 17.38vw, 12.7rem));
+}
+
+.top-horizontal-bar-right.movies-01 {
+  transform: translateY(clamp(8.4rem, -1.429rem + 20.48vw, 17rem));
+}
+
+.top-horizontal-bar-right.movies-02 {
+  transform: translateY(clamp(17.13rem, -2.23rem + 40.33vw, 34.07rem));
+}
+
+.top-horizontal-bar-right.movies-03 {
+  transform: translateY(clamp(26.25rem, -4.447rem + 63.95vw, 53.11rem));
+}
+
+.pc-vertical-bar-right.movies {
+  transform: translateY(-10rem);
+}
+
+.pc-vertical-bar-right.movies p {
+  color: var(--accent_1_2, #E07BB5);
+  font-size: clamp(0.5rem, 0.043rem + 0.95vw, 0.9rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  writing-mode: vertical-rl;
+  transform: translateX(clamp(0.2rem, 0.051rem + 0.31vw, 0.33rem)) translateY(clamp(30rem, 27.714rem + 4.76vw, 32rem));
+  letter-spacing: 3px;
+}
+
+.pc-lyrics-container {
+  width: 141%;
+}
+
+.top-subtitle-horizontal-bar.lyrics {
+  transform: translateX(clamp(3rem, -5rem + 16.67vw, 10rem)) translateY(clamp(2rem, -3.714rem + 11.9vw, 7rem));
+  width: 82%;
+}
+
+.top-subtitle-horizontal-bar.lyrics p {
+  color: var(--accent_1_2, #E07BB5);
+  font-size: clamp(0.813rem, 0.241rem + 1.19vw, 1.313rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 7.2px;
+  transform: translateX(4rem);
+}
+
+.bottom-title-horizontal-bar.lyrics {
+  transform: translateX(clamp(0rem, -6.857rem + 14.29vw, 6rem)) translateY(clamp(3rem, -3.514rem + 13.57vw, 8.7rem));
+  width: 92%;
+}
+
+.bottom-title-horizontal-bar.lyrics p {
+  color: var(--accent_1_2, #E07BB5);
+  font-size: clamp(0.813rem, 0.241rem + 1.19vw, 1.313rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 7.2px;
+  transform: translateX(clamp(3.5rem, -1.071rem + 9.52vw, 7.5rem));
+}
+
+.bottom-title-horizontal-bar.lyrics-01 {
+  transform: translateX(clamp(-2rem, -4.286rem + 4.76vw, 0rem)) translateY(clamp(6rem, -2rem + 16.67vw, 13rem));
+  width: 123%;
+}
+
+.bottom-title-horizontal-bar.lyrics-01 p {
+  color: white;
+  font-size: clamp(0.813rem, 0.241rem + 1.19vw, 1.313rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 7.2px;
+  transform: translateX(clamp(2rem, -1.429rem + 7.14vw, 5rem));
+}
+
+.bottom-title-horizontal-bar.lyrics-02 {
+  transform: translateX(clamp(-2rem, -4.286rem + 4.76vw, 0rem)) translateY(clamp(4.5rem, -4.986rem + 19.76vw, 12.8rem));
+  width: 123%;
+}
+
+.bottom-title-horizontal-bar.lyrics-02 p {
+  color: white;
+  font-size: clamp(0.813rem, 0.241rem + 1.19vw, 1.313rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 7.2px;
+  transform: translateX(clamp(2rem, -1.429rem + 7.14vw, 5rem));
+}
+
+.bottom-title-horizontal-bar.lyrics-03 {
+  transform: translateX(clamp(-2rem, -4.286rem + 4.76vw, 0rem)) translateY(clamp(4.3rem, -4.5rem + 18.33vw, 12rem));
+  width: 123%;
+}
+
+.bottom-title-horizontal-bar.lyrics-03 p {
+  color: white;
+  font-size: clamp(0.813rem, 0.241rem + 1.19vw, 1.313rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 7.2px;
+  transform: translateX(clamp(2rem, -1.429rem + 7.14vw, 5rem));
+}
+
+.pc-lyrics-text-container {
+  color: #FFF;
+  font-family: "Hina Mincho";
+  font-size: clamp(0.5rem, 0.071rem + 0.89vw, 0.875rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: clamp(0.938rem, -0.134rem + 2.23vw, 1.875rem);
+  letter-spacing: clamp(0.138rem, -0.005rem + 0.3vw, 0.263rem);
+}
+
+.pc-lyrics-text-container.lyrics-text-01 {
+  transform: translateX(1rem) translateY(clamp(7rem, -3.286rem + 21.43vw, 16rem));
+  width: clamp(13.5rem, -5.429rem + 39.43vw, 30.063rem);
+}
+
+.pc-lyrics-text-container.lyrics-text-01 p {
+  margin-bottom: clamp(0.3rem, -0.5rem + 1.67vw, 1rem);
+}
+
+.pc-lyrics-text-container.lyrics-text-02 {
+  transform: translateX(1rem) translateY(clamp(5.4rem, -6.714rem + 25.24vw, 16rem));
+  width: clamp(13.5rem, -5.429rem + 39.43vw, 30.063rem);
+}
+
+.pc-lyrics-text-container.lyrics-text-02 p {
+  margin-bottom: clamp(0.5rem, -0.643rem + 2.38vw, 1.5rem);
+}
+
+.pc-lyrics-text-container.lyrics-text-03 {
+  transform: translateX(1rem) translateY(clamp(5.4rem, -5.571rem + 22.86vw, 15rem));
+  width: clamp(13.5rem, -5.429rem + 39.43vw, 30.063rem);
+}
+
+.pc-lyrics-text-container.lyrics-text-03 p {
+  margin-bottom: clamp(0.5rem, -0.643rem + 2.38vw, 1.5rem);
+}
+
+a.more-link.pc-link {
+  font-size: 12px;
+  margin-bottom: clamp(3.5rem, 0.986rem + 5.24vw, 5.7rem);
+  margin-left: clamp(10rem, -8.286rem + 38.1vw, 26rem);
+}
+
+
+
+
+
+
+
+
+
