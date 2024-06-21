@@ -77,7 +77,7 @@ get_header(); // ヘッダーの読み込み
                 <p class="contact-option">カテゴリー</p>
                 <p class="contact-answer">${categoryMapping[formData.category] || '選択されていません'}</p>
             </div>
-        </div>        `;
+        </div>`;
 
         // チケット予約が選択されている場合のみライブ情報とチケット枚数を追加表示
         if (formData.category === 'ticket') {
@@ -95,8 +95,7 @@ get_header(); // ヘッダーの読み込み
                 <p class="contact-option">チケット枚数</p>
                 <p class="contact-answer">${formData.ticketCount || '選択されていません'}</p>
             </div>
-        </div>
-            `;
+        </div>`;
         }
 
         // 基本情報の残りを追加表示
@@ -114,8 +113,14 @@ get_header(); // ヘッダーの読み込み
                 <p class="contact-option">メールアドレス</p>
                 <p class="contact-answer long-answer">${formData.email}</p>
             </div>
-        </div>        `;
-
+        </div>
+        <div class="input-grid-container confirmation">
+            <div class="black-bar"></div>
+            <div class="contact-row">
+                <p class="contact-option">お問い合わせ内容</p>
+                <p class="contact-answer">${formData.inquiryDetails || '入力されていません'}</p>
+            </div>
+        </div>`;
 
         // 送信ボタンのクリックイベントリスナーを追加
         document.getElementById('confirmSubmit').addEventListener('click', function() {
@@ -145,5 +150,6 @@ get_header(); // ヘッダーの読み込み
         });
     });
 </script>
+
 
 <?php get_footer(); ?>

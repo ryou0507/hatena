@@ -190,6 +190,7 @@ select {
 html {
   scroll-behavior: smooth;
 }
+
 /********** SP PC 切り替え **********/
 .sp-index-all-container {
   display: block;
@@ -200,9 +201,12 @@ html {
 }
 
 @media (min-width: 768px) {
-  .sp-index-all-container {
+  .sp-index-all-container,
+  section.firstview-container,
+  .jacket-container {
     display: none;
   }
+
   .pc-index-all-container {
     display: block;
   }
@@ -892,7 +896,7 @@ p.no-schedule {
 }
 
 .song-title {
-  color: var(--accent_1_2);
+  color: rgba(255, 255, 255, 1);
   font-size: 18px;
   font-weight: 400;
   letter-spacing: 4.5px;
@@ -1378,7 +1382,7 @@ a.to-movie svg {
 }
 
 .lyrics-page-title.custom {
-  color: var(--accent_1_2, #e07bb5);
+  color: rgba(255, 255, 255, 1);
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
@@ -1563,7 +1567,8 @@ a.to-movie svg {
 select#category,
 .input-area,
 select#liveInfo,
-select#ticketCount {
+select#ticketCount,
+textarea#inquiryDetails {
   padding-left: 3%;
   height: 32px;
   width: 88%;
@@ -1581,6 +1586,10 @@ select {
   appearance: none;
   border-radius: 4px;
   color: black; /* テキストカラーを黒に設定 */
+}
+
+textarea#inquiryDetails {
+  height: 100px; /* テキストエリアの高さを調整 */
 }
 
 /********** 入力確認ページ レイアウト  **********/

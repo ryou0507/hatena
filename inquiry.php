@@ -52,6 +52,15 @@ get_header(); // ヘッダーの読み込み
                         <input class="input-area" type="email" id="email" name="email" required>
                     </div>
                 </div>
+
+                <div class="input-grid-container">
+                    <div class="black-bar"></div>
+                    <div class="input-content">
+                        <label for="inquiryDetails" class="text-area">お問い合わせ内容</label>
+                        <textarea id="inquiryDetails" name="inquiryDetails" placeholder="お問い合わせ内容を入力してください。" required></textarea>
+                    </div>
+                </div>
+
             </form>
         </div>
 
@@ -95,6 +104,11 @@ get_header(); // ヘッダーの読み込み
                 window.location.href = '<?php echo home_url(); ?>/confirmation/';
             });
         </script>
+        <script>
+            var templateDir = '<?php echo esc_url(get_template_directory_uri()); ?>';
+        </script>
+        <script src="<?php echo esc_url(get_template_directory_uri()); ?>/js/custom.js"></script>
+
 
     </section>
 </div>

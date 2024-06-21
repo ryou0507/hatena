@@ -26,7 +26,104 @@ document.addEventListener("DOMContentLoaded", function () {
   check;
 });
 
-/**********　ハンバーガーボタン　**********/
+/********** ハンバーガーボタン（PC用） **********/
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburgerPcBtn = document.getElementById("hamburger-pc");
+  const hamburgerPcMenu = document.getElementById("hamburger-menu");
+
+  hamburgerPcBtn.addEventListener("click", function () {
+    console.log("Hamburger button clicked");
+
+    if (window.innerWidth >= 768) {
+      // PCにだけ適用
+      if (hamburgerPcMenu.classList.contains("open")) {
+        hamburgerPcMenu.classList.remove("open");
+        document.body.classList.remove("no-scroll");
+        hamburgerPcBtn.classList.remove("active");
+        resetPcMainMenu(); // メニューを閉じるときにトップに戻す
+        console.log("Menu closed");
+      } else {
+        hamburgerPcMenu.classList.add("open");
+        document.body.classList.add("no-scroll");
+        hamburgerPcBtn.classList.add("active");
+        console.log("Menu opened");
+      }
+    } else {
+      hamburgerPcMenu.classList.toggle("open");
+      console.log("Menu toggled (mobile)");
+    }
+  });
+
+  // サブメニューを開くトリガー
+  const pcNextSubmenuToggles = document.querySelectorAll(
+    ".hamburger-movies-polygon.pc, .hamburger-lyrics-polygon.pc"
+  );
+  pcNextSubmenuToggles.forEach(function (toggle) {
+    toggle.addEventListener("click", function () {
+      if (window.innerWidth >= 768) {
+        const targetId = this.getAttribute("data-target");
+        const submenu = document.getElementById(targetId);
+        if (submenu) {
+          hideAllPcSubmenus();
+          submenu.style.display = "flex";
+          console.log(`Submenu ${targetId} opened`);
+          hamburgerPcBtn.classList.add("active"); // ボタンを×に保つ
+        }
+      }
+    });
+  });
+
+  // サブメニューを閉じるトリガー
+  const pcPrevSubmenuToggles = document.querySelectorAll(
+    ".hamburger-submenu-prev-polygon.pc"
+  );
+  pcPrevSubmenuToggles.forEach(function (toggle) {
+    toggle.addEventListener("click", function () {
+      if (window.innerWidth >= 768) {
+        const targetId = this.getAttribute("data-target");
+        if (targetId === "nav-links") {
+          hideAllPcSubmenus();
+          resetPcMainMenu();
+          console.log("Returned to main menu");
+          hamburgerPcBtn.classList.add("active"); // ボタンを×に保つ
+        } else {
+          const submenu = document.getElementById(targetId);
+          if (submenu) {
+            hideAllPcSubmenus();
+            submenu.style.display = "flex";
+            console.log(`Submenu ${targetId} opened`);
+            hamburgerPcBtn.classList.add("active"); // ボタンを×に保つ
+          }
+        }
+      }
+    });
+  });
+
+  // 全てのサブメニューを隠す関数
+  function hideAllPcSubmenus() {
+    const pcSubmenus = document.querySelectorAll(
+      ".submenu-overlay.pc, .submenu-overlay-last.pc"
+    );
+    pcSubmenus.forEach(function (submenu) {
+      submenu.style.display = "none";
+    });
+  }
+
+  // メインメニューにリセットする関数
+  function resetPcMainMenu() {
+    const navLinks = document.getElementById("nav-links");
+    navLinks.style.display = "flex"; // メインメニューを表示
+    const linksContainers = navLinks.querySelectorAll(".links-container.pc");
+    linksContainers.forEach(function (container) {
+      container.style.display = "block"; // 各リンクコンテナを表示
+    });
+    hideAllPcSubmenus(); // サブメニューをすべて閉じる
+    // ハンバーガーボタンの状態をリセット
+    hamburgerPcBtn.classList.remove("active");
+  }
+});
+
+/********** ハンバーガーボタン（モバイル用） **********/
 document.addEventListener("DOMContentLoaded", function () {
   var hamburger = document.getElementById("hamburger");
   var menu = document.querySelector(".hamburger-menu");
@@ -51,19 +148,21 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   var submenuToggles = document.querySelectorAll(
-    ".hamburger-movies-polygon, .hamburger-lyrics-polygon, .hamburger-submenu-next-polygon, .hamburger-submenu-prev-polygon"
+    ".hamburger-movies-polygon, .hamburger-lyrics-polygon, .hamburger-submenu-prev-polygon, .hamburger-submenu-next-polygon"
   );
   submenuToggles.forEach(function (toggle) {
     toggle.addEventListener("click", function () {
-      var targetId = this.getAttribute("data-target");
-      var submenu = document.getElementById(targetId);
-      if (submenu) {
-        hideAllSubmenus();
-        submenu.style.display = "flex";
-      } else if (targetId === "nav-links") {
-        hideAllSubmenus();
-        menu.style.display = "block";
-        resetMainMenu();
+      if (window.innerWidth < 768) {
+        const targetId = this.getAttribute("data-target");
+        const submenu = document.getElementById(targetId);
+        if (submenu) {
+          hideAllSubmenus();
+          submenu.style.display = "flex";
+        } else if (targetId === "nav-links") {
+          hideAllSubmenus();
+          menu.style.display = "block";
+          resetMainMenu();
+        }
       }
     });
   });
@@ -354,12 +453,19 @@ document.addEventListener("DOMContentLoaded", function () {
       var targetElement = document.getElementById(targetId);
 
       if (targetElement) {
+        // モーダル内の要素かどうかを確認
+        var isInModal = targetElement.closest(".modal.show");
+
+        if (isInModal) {
+          return; // モーダル内の要素の場合、スムーススクロールを無視
+        }
+
         event.preventDefault();
 
         // ヘッダーの高さを取得（例: 40px）
         var headerHeight =
           document.querySelector(".header-container").offsetHeight;
-        // 追加のオフセットを設定（例: 60px）
+        // 追加のオフセットを設定（例: 20px）
         var additionalOffset = 20; // この値を調整してさらに上にスクロール
 
         // 現在のスクロール位置を取得
@@ -394,6 +500,13 @@ document.addEventListener("DOMContentLoaded", function () {
     var targetElement = document.getElementById(targetId);
 
     if (targetElement) {
+      // モーダル内の要素かどうかを確認
+      var isInModal = targetElement.closest(".modal.show");
+
+      if (isInModal) {
+        return; // モーダル内の要素の場合、スムーススクロールを無視
+      }
+
       setTimeout(function () {
         var headerHeight =
           document.querySelector(".header-container").offsetHeight;
@@ -409,11 +522,6 @@ document.addEventListener("DOMContentLoaded", function () {
           behavior: "smooth",
         });
 
-        // スクロールアップアニメーションを適用
-        setTimeout(function () {
-          targetElement.classList.add("scroll-up-active");
-        }, 500); // スクロールアニメーションの後にアクティブクラスを追加
-
         // 余白を動的に調整
         document.querySelector(
           ".movies-thumbnail-section.custom"
@@ -424,37 +532,55 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /********** お問い合わせページ チケット予約選択時 **********/
-document.getElementById("category").addEventListener("change", function () {
-  var additionalFields = document.getElementById("additional-fields");
-  additionalFields.innerHTML = ""; // 既存の追加フィールドをクリア
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("category").addEventListener("change", function () {
+    var additionalFields = document.getElementById("additional-fields");
+    additionalFields.innerHTML = ""; // 既存の追加フィールドをクリア
 
-  if (this.value === "ticket") {
-    var liveInfoField = `
-          <div class="input-grid-container">
-              <div class="black-bar"></div>
-              <div class="input-content">
-                  <label for="liveInfo" class="text-area">ライブ情報</label>
-                  <select name="liveInfo" id="liveInfo">
-                      <option value="">選択してください</option>
-                      <option value="shinjuku">新宿Cat's hole</option>
-                      <option value="other1">○○○○</option>
-                      <option value="other2">○○○○</option>
-                      <option value="other3">○○○○</option>
-                  </select>
+    if (this.value === "ticket") {
+      var liveInfoField =
+        `
+              <div class="input-grid-container">
+                  <div class="black-bar"></div>
+                  <div class="input-content">
+                      <label for="liveInfo" class="text-area">ライブ情報</label>
+                      <select name="liveInfo" id="liveInfo">
+                          <option value="">選択してください</option>
+                          <option value="shinjuku">新宿Cat's hole</option>
+                          <option value="other1">○○○○</option>
+                          <option value="other2">○○○○</option>
+                          <option value="other3">○○○○</option>
+                      </select>
+                      <img src="` +
+        templateDir +
+        `/images/polygon-4.svg" id="dropdown-icon-liveInfo" style="position: absolute; right: 35px; top: 70%; transform: translateY(-50%); cursor: pointer;" />
+                  </div>
               </div>
-          </div>
-          <div class="input-grid-container">
-              <div class="black-bar"></div>
-              <div class="input-content">
-                  <label for="ticketCount" class="text-area">チケット枚数</label>
-                  <select name="ticketCount" id="ticketCount">
-                      <option value="">選択してください</option>
-                      <option value="1">1枚</option>
-                      <option value="2">2枚</option>
-                  </select>
+              <div class="input-grid-container">
+                  <div class="black-bar"></div>
+                  <div class="input-content">
+                      <label for="ticketCount" class="text-area">チケット枚数</label>
+                      <select name="ticketCount" id="ticketCount">
+                          <option value="">選択してください</option>
+                          <option value="1">1枚</option>
+                          <option value="2">2枚</option>
+                      </select>
+                      <img src="` +
+        templateDir +
+        `/images/polygon-4.svg" id="dropdown-icon-ticketCount" style="position: absolute; right: 35px; top: 70%; transform: translateY(-50%); cursor: pointer;" />
+                  </div>
               </div>
-          </div>
-      `;
-    additionalFields.innerHTML = liveInfoField;
+          `;
+      additionalFields.innerHTML = liveInfoField;
+
+      addDropdownIcon("dropdown-icon-liveInfo", "liveInfo");
+      addDropdownIcon("dropdown-icon-ticketCount", "ticketCount");
+    }
+  });
+
+  function addDropdownIcon(iconId, selectId) {
+    document.getElementById(iconId).addEventListener("click", function () {
+      document.getElementById(selectId).click(); // クリックイベントをトリガーしてデフォルトのプルダウンを表示
+    });
   }
 });
