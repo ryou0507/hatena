@@ -127,19 +127,24 @@ function custom_schedule_list_content($paged = 1, $posts_per_page = 4, $show_pag
             if (has_post_thumbnail()) {
                 echo '<div class="schedule-thumbnail">' . get_the_post_thumbnail() . '</div>';
             }
+
+            echo '<div class="pc-schedule-text-container">';
             echo '<div class="schedule-date">' . $date . ' (' . strtoupper($weekday) . ')</div>';
             echo '<div class="schedule-title"><a href="' . get_permalink() . '">' . get_the_title() . '</a></div>';
             echo '<div class="schedule-content-wrapper">';
-            echo '<div class="schedule-content">' . $excerpt . '</div>';
+            echo '<div class="schedule-content full-content">' . $content . '</div>';
+            echo '<div class="schedule-content excerpt-content">' . $excerpt . '</div>';
             if (!empty($remaining_content)) {
-                echo '<div class="schedule-remaining-content" style="display:none;">' . $remaining_content . '</div>';
-                echo '<div class="schedule-btn"><button class="toggle-content-btn">▼</button></div>';
+                echo '<div class="schedule-remaining-content excerpt-content" style="display:none;">' . $remaining_content . '</div>';
+                echo '<div class="schedule-btn excerpt-content"><button class="toggle-content-btn">▼</button></div>';
             }
             if ($google_map_link) {
                 $page_class = is_front_page() ? 'top-page-schedule' : 'schedule-page-schedule';
                 echo '<a href="' . esc_url($google_map_link) . '" class="google-map-link ' . $page_class . '">Google Map</a>';
             }
-            echo '</div>';
+            echo '</div>'; // end .schedule-content-wrapper
+            echo '</div>'; // end .pc-schedule-text-container
+
             echo '</li>';
         }
         echo '</ul>';
